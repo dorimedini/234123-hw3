@@ -1,0 +1,11 @@
+1.  Maybe we should use several different locks for the process queue?
+    One for destruction, one for creation... etc. For example, when creating
+	a new process, first try locking the destruction lock and if we fail
+	then that means that we can't add any more processes because we're
+	destroying the queue so there's no point in taking the creation queue:
+	- void createth(queue) {
+	-     if (lock(queue->dest)) return;
+	-     while(lock(queue->create));	// <--- Is this safe?
+	-     ... create task ...
+	-     unlock(queue->create);
+	-     unlock(queue->dest);
