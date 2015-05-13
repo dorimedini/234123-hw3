@@ -3,14 +3,20 @@
  */
 struct tp {
 	
-	// Locks for destroying the data structure.
-	// Low priority lock L: for reading
-	// High priority lock H: for writing (destroying)
-	// Usage:
-	// READ: lock(L)-->lock(H)-->{read}-->unlock(H)-->unlock(L)
-	// WRITE:          lock(H)-->{write}->unlock(H)
-	mutex dest_L,dest_H;
-	enum state_enum {ALIVE,DO_ALL,DO_RUN} state;	// Default: ALIVE
+	/**
+	 * QUESTION:
+	 *
+	 * How should we implement R/W protection of the "state" field?
+	 * This is a readers-writers problem. We shouldn't allow multiple
+	 * writers ("destroy" can only be done once), we should allow lots
+	 * of readers (all threads read this all the time) and we should
+	 * let the writer get high priority.
+	 *
+	 * Useful links:
+	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf (PAGES 4-5)
+	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#cite_note-1 (LINK FROM LECTURE SLIDES: WE SHOULD DO THE SECOND READERS-WRITERS PROBLEM)
+	 */
+	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
 	// Queue with conditional lock.
 	// Threads should wait for the queue to contain something,
@@ -31,31 +37,30 @@ struct tp {
 }
 
 /**
- * Locking/unlocking access to destruction lock.
+ * How to implement these?
  *
- * Not very interesting, just implements this:
- *	 READ: lock(L)-->lock(H)-->{read}-->unlock(H)-->unlock(L)
- *	 WRITE:          lock(H)-->{write}->unlock(H)
+ * See above comments
  */
-low_prio_dest_lock(pool) {
-	lock(pool->dest_L);
-	lock(pool->dest_H);
+start_read(pool) {
+	???
 }
-high_prio_dest_lock(pool) {
-	lock(pool->dest_H);
+end_read(pool) {
+	???
 }
-low_prio_dest_unlock(pool) {
-	unlock(pool->dest_H);
-	unlock(pool->dest_L);
+start_write(pool) {
+	???
 }
-high_prio_dest_unlock(pool) {
-	unlock(pool->dest_H);
+end_write(pool) {
+	???
 }
-state_enum LOW_PRIO_READ_STATE(pool) {
-	state_enum state;
-	low_prio_dest_lock(pool);
-	state = pool->state;
-	low_prio_dest_unlock(pool);
+
+/**
+ * Use the above to quickly read and return the state of the thread pool
+ */
+state_enum read_state(pool) {
+	start_read(pool);
+	state_enum state = pool->state;
+	end_read(pool);
 	return state;
 }
 
@@ -71,17 +76,17 @@ state_enum LOW_PRIO_READ_STATE(pool) {
  * 5. Unlock the destruction lock (now we can kill the thread pool)
  */
 add(t,pool) {
-	low_prio_dest_lock(pool);				// Keep this locked while adding a task!
+	start_read(pool);						// Keep this locked while adding a task!
 	if (pool->state != ALIVE) {				// If it's being destroyed, don't add a task...
-		low_prio_dest_unlock(pool);
+		end_read(pool);
 		return FAIL;
 	}
 	acquire_lock(pool->task_lock);			// No semaphore here: we're going to signal anyway.
 											// DANGER OF DEADLOCK WITH THREAD ACQUIRING THIS LOCK?
 	enqueue(t,pool->tasks);
-	release_lock(pool->task_lock);			// WHICH OF THESE TWO SHOULD COME FIRST?
+	release_lock(pool->task_lock);			// WHICH OF THESE THREE SHOULD COME FIRST?
+	end_read(pool);							// Allow destruction of the thread pool
 	signal(pool->queue_not_empty_or_dying);	// MUST WE ENFORCE IT SO THE COMPILER KNOWS?
-	low_prio_dest_unlock(pool);				// Allow destruction of the thread pool
 }
 
 /**
@@ -99,10 +104,12 @@ add(t,pool) {
  * 6. When the threads are done, destroy all fields of the pool
  */
 destroy(pool,finish_all) {
-	high_prio_dest_lock(pool);
-	pool->state = finish_all ? DO_ALL : DO_RUN;
-	high_prio_dest_unlock(pool);
-	broadcast(queue_not_empty_or_dying);	// Dying, actually. Thanks for asking.
+	start_write(pool);
+	if (pool->state != ALIVE) return;			// Destruction already in progress.
+												// This can happen if destroy() is called twice fast
+	pool->state = finish_all ? DO_ALL : DO_RUN;	// Enter destroy mode
+	end_write(pool);							// Allow reading the state
+	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking.
 	{WAIT FOR ALL THREADS? THEN DESTROY FIELDS OF THE THREAD POOL?}
 }
 
@@ -163,7 +170,7 @@ thread_func(pool) {
 		while (is_empty(pool->queue) && LOW_PRIO_READ_STATE(pool) == ALIVE) {	// Wait for a task OR the destruction of the pool
 			wait(pool->queue_not_empty_or_dying,pool->task_lock);
 		}
-		switch(LOW_PRIO_READ_STATE(pool)) {
+		switch(read_state(pool)) {
 			case ALIVE:								// If we're not dying, take a task and do it.
 				t = dequeue(pool->queue);
 				release_lock(pool->task_lock);
