@@ -22,8 +22,8 @@ struct tp {
 	 * needs to wait for the thread!
 	 *
 	 * Useful links:
-	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf (PAGES 4-5)
-	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#cite_note-1 (LINK FROM LECTURE SLIDES: WE SHOULD IMPLEMENT THE SECOND READERS-WRITERS PROBLEM)
+	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf		(PAGES 4-5)
+	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem			(LINK FROM LECTURE SLIDES: WE SHOULD IMPLEMENT THE SECOND READERS-WRITERS PROBLEM)
 	 */
 	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
@@ -43,6 +43,21 @@ struct tp {
 	mutex task_lock;						// Lock this to change the queue. Needed to allow adding a task on an empty queue
 	queue tasks;							// Task queue
 	
+}
+
+/**
+ * Create the thread pool.
+ *
+ * Pretty simple, just make sure the threads we create can't do anything
+ * until we're done.
+ */
+tp* create(N) {
+	threadPool* tp = {allocate memory and make sure it worked}
+	{init variables - make sure the condition is 0, the queue is empty and state==ALIVE}
+	/* DO NOT lock the task->lock! The created threads should wait for the signal anyway... */
+	/* NO NEED to lock the dest_lock because no thread will check it until it's signalled anyway */
+	{create N threads with the thread_func function and tp and it's argument}
+	return tp;
 }
 
 /**
@@ -98,21 +113,6 @@ destroy(pool,finish_all) {
 	end_write(pool);							// Allow reading the state
 	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking. Tell everyone!
 	{WAIT FOR ALL THREADS? THEN DESTROY FIELDS OF THE THREAD POOL?}
-}
-
-/**
- * Create the thread pool.
- *
- * Pretty simple, just make sure the threads we create can't do anything
- * until we're done.
- */
-tp* create(N) {
-	threadPool* tp = {allocate memory and make sure it worked}
-	{init variables - make sure the condition is 0, the queue is empty and state==ALIVE}
-	/* DO NOT lock the task->lock! The created threads should wait for the signal anyway... */
-	/* NO NEED to lock the dest_lock because no thread will check it until it's signalled anyway */
-	{create N threads with the thread_func function and tp and it's argument}
-	return tp;
 }
 
 /**
