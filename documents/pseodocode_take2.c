@@ -174,12 +174,12 @@ tp* create(N) {
  * 6. If we're DO_RUN, exit. Don't take another task, leave them to rot.
  */
 thread_func(pool) {
+	state_enum state;
 	while(1) {
-		acquire_lock(pool->task_lock);	// NO BUSYWAIT! WE'LL BE STUCK HERE FOR A WHILE DURING THREADPOOL_CREATE()!
-		while (is_empty(pool->queue) && LOW_PRIO_READ_STATE(pool) == ALIVE) {	// Wait for a task OR the destruction of the pool
+		acquire_lock(pool->task_lock);	// This is OK because during INIT, we don't lock the task queue (after its creation)
+		while (is_empty(pool->queue) && (state = read_state(pool)) == ALIVE)	// Wait for a task OR the destruction of the pool
 			wait(pool->queue_not_empty_or_dying,pool->task_lock);
-		}
-		switch(read_state(pool)) {
+		switch(state) {
 			case ALIVE:								// If we're not dying, take a task and do it.
 				t = dequeue(pool->queue);
 				release_lock(pool->task_lock);
