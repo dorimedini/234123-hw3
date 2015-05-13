@@ -9,7 +9,22 @@ threadpool {
 	semaphore sRead;
 	semaphore sWrite;
 	
+}
+
+dying_enum read_die(threadpool* pool) {
 	
+	// Read the dying state (lecture 4, by the end... CREW example)
+	dying_enum state;
+	wait(pool->sRead);
+	pool->r+=1;
+	if(pool->r==1) wait(pool->sWrite);
+	signal(pool->sRead);
+	state = pool->dying;		// The actual read
+	wait(pool->sRead);
+	pool->r-=1;
+	if (pool->r==0) signal(pool->sWrite);
+	signal(pool->sRead);
+	return state;
 	
 }
 
@@ -17,16 +32,7 @@ void thread_start(threadpool* pool) {
 	while(1) {
 		
 		// Read the dying state (lecture 4, by the end... CREW example)
-		dying_enum state;
-		wait(pool->sRead);
-		r+=1;
-		if(r==1) wait(pool->sWrite);
-		signal(pool->sRead);
-		state = pool->dying;		// The actual read
-		wait(pool->sRead);
-		r-=1;
-		if (r==0) signal(pool->sWrite);
-		signal(pool->sRead);
+		dying_enum state = read_die(pool);
 		
 		// Decide if we should get a task
 		if (state == FINISH_RUNNING) exit(0);
@@ -34,8 +40,8 @@ void thread_start(threadpool* pool) {
 		// Get next task to run
 		lock_acquire(pool->task_lock);
 		if (state == FINISH_ALL && is_empty(pool->tasks)) exit(0);		// If there are no tasks and we're dying, die
-		while(is_empty(pool->tasks)) wait(notEmpty,pool->task_lock);
-		t= dequeue_task(pool);
+		while(is_empty(pool->tasks)) wait(notEmpty,pool->task_lock);	// IF POOL IS BEING DESTROYED THIS IS INIFITE!
+		t = dequeue_task(pool);
 		lock_release(pool->task_lock);
 		do_task(t);
 	}
@@ -54,7 +60,7 @@ void destroy_pool(threadpool* pool, int should_wait) {
 		... destroy...	// DANGER: If there were never any tasks, there are now threads waiting
 						// for a task. THEY WILL NEVER EXIT IF THEY ARE NOT GIVEN TASKS!
 		MAYBE: If the task list is empty and there are still threads, add dummy task
-		OR, BETTER: Send Killall to the threads?
+		OR, BETTER: Send Killall to the threads? WON'T WORK: WE NEED TO LET THEM RUN...
 	}
 }
 

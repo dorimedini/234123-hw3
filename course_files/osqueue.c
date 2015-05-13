@@ -13,7 +13,7 @@ OSQueue* osCreateQueue()
    return q;
 }
 
-void* osDestroyQueue(OSQueue* q)
+void osDestroyQueue(OSQueue* q)
 {
    if(q == NULL)
       return;
@@ -23,7 +23,7 @@ void* osDestroyQueue(OSQueue* q)
    free(q);
 }
 
-int osIsEmpty(OSQueue* q)
+int osIsQueueEmpty(OSQueue* q)
 { 
    return (q->tail == NULL && q->head == NULL);
 }

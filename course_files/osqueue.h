@@ -15,7 +15,7 @@ typedef struct os_queue
 
 OSQueue* osCreateQueue();
 
-void* osDestroyQueue(OSQueue* queue);
+void osDestroyQueue(OSQueue* queue);
 
 int osIsQueueEmpty(OSQueue* queue);
 
