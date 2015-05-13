@@ -1,13 +1,31 @@
 #ifndef __THREAD_POOL__
 #define __THREAD_POOL__
 
+#include <pthread.h>
+#include "osqueue.h"
+
+/**
+ * The three states a thread pool can be in:
+ * ALIVE:  Normal.
+ * DO_ALL: In the process of being destroyed, but should complete all existing tasks
+ * DO_RUN: In the process of being destroyed, without completing any enqueued tasks
+ */
+typedef enum state_enum {
+	ALIVE,
+	DO_ALL,
+	DO_RUN
+};
+
 typedef struct thread_pool
 {
- //The field x is here because a struct without fields
- //doesn't compile. Remove it once you add fields of your own
- int x;
- //TODO - FILL THIS WITH YOUR FIELDS
-}ThreadPool;
+	
+	// Total number of threads
+	int N;
+	
+	// TODO: Everything else :)
+	
+	
+} ThreadPool;
 
 ThreadPool* tpCreate(int numOfThreads);
 
