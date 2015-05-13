@@ -12,9 +12,18 @@ struct tp {
 	 * of readers (all threads read this all the time) and we should
 	 * let the writer get high priority.
 	 *
+	 * Remember - we NEED to allow infinite simultaneous readers of the
+	 * pool state, because of this possible scenario:
+	 * - add() is called, we call start_read()
+	 * - CONTEXT SWITCH
+	 * - A thread start it's while() loop and does acquire_lock(pool->task_lock) 
+	 * - Enters the inner while() loop, calls read_state()
+	 * If we use mutex locks, read_state() needs to wait for add(), and add()
+	 * needs to wait for the thread!
+	 *
 	 * Useful links:
 	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf (PAGES 4-5)
-	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#cite_note-1 (LINK FROM LECTURE SLIDES: WE SHOULD DO THE SECOND READERS-WRITERS PROBLEM)
+	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#cite_note-1 (LINK FROM LECTURE SLIDES: WE SHOULD IMPLEMENT THE SECOND READERS-WRITERS PROBLEM)
 	 */
 	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
