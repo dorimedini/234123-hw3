@@ -114,8 +114,10 @@ add(t,pool) {
  */
 destroy(pool,finish_all) {
 	start_write(pool);
-	if (pool->state != ALIVE) return;			// Destruction already in progress.
-												// This can happen if destroy() is called twice fast
+	if (pool->state != ALIVE) {					// Destruction already in progress.
+		end_write(pool);						// This can happen if destroy() is called twice fast
+		return;
+	}
 	pool->state = finish_all ? DO_ALL : DO_RUN;	// Enter destroy mode
 	end_write(pool);							// Allow reading the state
 	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking.
