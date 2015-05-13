@@ -75,30 +75,6 @@ state_enum read_state(pool) {
 
 
 /**
- * Add task.
- *
- * Basically:
- * 1. Make sure we're not being destroyed, and prevent destruction until we're done (dest_lock)
- * 2. Lock the task queue (unconditionally - no upper limit on number of tasks)
- * 3. Add a task
- * 4. Release the task queue lock and signal that the queue isn't empty (which one first?)
- * 5. Unlock the destruction lock (now we can kill the thread pool)
- */
-add(t,pool) {
-	start_read(pool);						// Keep this locked while adding a task!
-	if (pool->state != ALIVE) {				// If it's being destroyed, don't add a task...
-		end_read(pool);
-		return FAIL;
-	}
-	acquire_lock(pool->task_lock);			// No semaphore here: we're going to signal anyway.
-											// DANGER OF DEADLOCK WITH THREAD ACQUIRING THIS LOCK?
-	enqueue(t,pool->tasks);
-	release_lock(pool->task_lock);			// WHICH OF THESE THREE SHOULD COME FIRST?
-	end_read(pool);							// Allow destruction of the thread pool
-	signal(pool->queue_not_empty_or_dying);	// MUST WE ENFORCE IT SO THE COMPILER KNOWS?
-}
-
-/**
  * Destroys the thread pool.
  *
  * 1. Lock the destruction lock (top priority... don't want to starve here)
@@ -120,7 +96,7 @@ destroy(pool,finish_all) {
 	}
 	pool->state = finish_all ? DO_ALL : DO_RUN;	// Enter destroy mode
 	end_write(pool);							// Allow reading the state
-	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking.
+	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking. Tell everyone!
 	{WAIT FOR ALL THREADS? THEN DESTROY FIELDS OF THE THREAD POOL?}
 }
 
@@ -137,6 +113,30 @@ tp* create(N) {
 	/* NO NEED to lock the dest_lock because no thread will check it until it's signalled anyway */
 	{create N threads with the thread_func function and tp and it's argument}
 	return tp;
+}
+
+/**
+ * Add task.
+ *
+ * Basically:
+ * 1. Make sure we're not being destroyed, and prevent destruction until we're done (dest_lock)
+ * 2. Lock the task queue (unconditionally - no upper limit on number of tasks)
+ * 3. Add a task
+ * 4. Release the task queue lock and signal that the queue isn't empty (which one first?)
+ * 5. Unlock the destruction lock (now we can kill the thread pool)
+ */
+add(t,pool) {
+	start_read(pool);						// Keep this locked while adding a task!
+	if (pool->state != ALIVE) {				// If it's being destroyed, don't add a task...
+		end_read(pool);
+		return FAIL;
+	}
+	acquire_lock(pool->task_lock);			// No semaphore here: we're going to signal anyway.
+											// DANGER OF DEADLOCK WITH THREAD ACQUIRING THIS LOCK!
+	enqueue(t,pool->tasks);
+	release_lock(pool->task_lock);			// WHICH OF THESE THREE SHOULD COME FIRST?
+	end_read(pool);							// Allow destruction of the thread pool
+	signal(pool->queue_not_empty_or_dying);	// MUST WE ENFORCE IT SO THE COMPILER KNOWS?
 }
 
 /**
@@ -180,7 +180,7 @@ thread_func(pool) {
 	while(1) {
 		acquire_lock(pool->task_lock);	// This is OK because during INIT, we don't lock the task queue (after its creation)
 		while (is_empty(pool->queue) && (state = read_state(pool)) == ALIVE)	// Wait for a task OR the destruction of the pool
-			wait(pool->queue_not_empty_or_dying,pool->task_lock);
+			wait(pool->queue_not_empty_or_dying,pool->task_lock);				// Either one gives a signal
 		switch(state) {
 			case ALIVE:								// If we're not dying, take a task and do it.
 				t = dequeue(pool->queue);
@@ -193,9 +193,9 @@ thread_func(pool) {
 					release_lock(pool->task_lock);	// state may be DO_ALL but is_empty() may be true...
 					DO_TASK(t);						// Thus, the while() loop terminated and we got here.
 				}
-				else {
-					release_lock(pool->task_lock);
-					exit(0);						// The only difference, really, between ALIVE and DO_ALL
+				else {								// If we're here, there are no more tasks to dequeue!
+					release_lock(pool->task_lock);	// As we're being destroyed anyway, exit.
+					exit(0);
 				}
 				break;
 			case DO_RUN:							// If we're dying and no more tasks should be done,
