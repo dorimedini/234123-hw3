@@ -34,18 +34,22 @@ struct tp {
 	semaphore state_lock;					// Mutex lock for the state field itself
 	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
-	// Queue with conditional lock.
-	// Threads should wait for the queue to contain something,
-	// so they do a wait-lock-dequeue-unlock loop looking for
-	// tasks. On the other hand, adding a task should be a 
-	// signal-lock-enqueue-unlock operation.
-	// When we want to destroy the thread pool, broadcast to
-	// all threads with this lock so they stop waiting and try
-	// to probe the queue. If the pool destruction is DO_RUN,
-	// even if there are tasks in the queue the thread should
-	// just exit. If the state is DO_ALL, keep looping but if
-	// after locking the task queue the thread sees that there
-	// are no tasks, exit - don't wait for a signal
+	/**
+ 	 * Queue with conditional lock.
+	 *
+	 * Threads should wait for the queue to contain something,
+	 * so they do a wait-lock-dequeue-unlock loop looking for
+	 * tasks. On the other hand, adding a task should be a 
+	 * signal-lock-enqueue-unlock operation.
+	 *
+	 * When we want to destroy the thread pool, broadcast to
+	 * all threads with this lock so they stop waiting and try
+	 * to probe the queue. If the pool destruction is DO_RUN,
+	 * even if there are tasks in the queue the thread should
+	 * just exit. If the state is DO_ALL, keep looping but if
+	 * after locking the task queue the thread sees that there
+	 * are no tasks, exit - don't wait for a signal
+	 */
 	condition queue_not_empty_or_dying;		// The condition to signal
 	mutex task_lock;						// Lock this to change the queue. Needed to allow adding a task on an empty queue
 	queue tasks;							// Task queue
@@ -119,12 +123,12 @@ start_write(pool) {
 	state_lock.P();		// Lock the data field! We're going to write to it
 }
 end_write(pool) {
-	state_lock.V();//release file
-	w_num_mutex.P();//reserve exit section
-	w_num--;//indicate you're leaving
-	if (w_num == 0)//checks if you're the last writer
-		read_try.V();//if you're last writer, you must unlock the readers. Allows them to try enter CS for reading
-	w_num_mutex.V();//release exit section
+	state_lock.V();		// Release the data field
+	w_num_mutex.P();	// Start editing w_num
+	w_num--;
+	if (w_num == 0)		// If this was the last writer that wanted to write, allow readers in
+		read_try.V();
+	w_num_mutex.V();	// Stop editing w_num
 }
 
 /**
