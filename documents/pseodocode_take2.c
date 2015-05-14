@@ -25,17 +25,17 @@ struct tp {
 	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf		(PAGES 4-5)
 	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#Second_readers-writers_problem
 	 */
-	int r_num, w_num; 						// Number of current readers and number of writers entering
-	semaphore r_num_mutex, w_num_mutex;		// Lock these when updating r_num or w_num
-	semaphore r_entry;						// The first lock locked when a reader starts trying to read
-	semaphore read_try;						// The second lock locked when a reader starts trying to read,
+	int r_num, w_num; 						// INIT: 0. Number of current readers and number of writers entering
+	semaphore r_num_mutex, w_num_mutex;		// INIT: 1. Lock these when updating r_num or w_num
+	semaphore r_entry;						// INIT: 1. The first lock locked when a reader starts trying to read
+	semaphore read_try;						// INIT: 1. The second lock locked when a reader starts trying to read,
 											// also used by writers to block readers arriving after the writer
 											// wants to write
-	semaphore state_lock;					// Mutex lock for the state field itself
+	semaphore state_lock;					// INIT: 1. 'Mutex' lock for the state field itself
 	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
 	/**
- 	 * Queue with conditional lock.
+ 	 * Queue with condition lock.
 	 *
 	 * Threads should wait for the queue to contain something,
 	 * so they do a wait-lock-dequeue-unlock loop looking for
@@ -274,12 +274,12 @@ thread_func(pool) {
 				}
 				else {								// If we're here, there are no more tasks to dequeue!
 					release_lock(pool->task_lock);	// As we're being destroyed anyway, exit.
-					exit(0);
+					return;
 				}
 				break;
 			case DO_RUN:							// If we're dying and no more tasks should be done,
 				release_lock(pool->task_lock);		// just exit before dequeuing anything...
-				exit(0);
+				return;
 				break;
 		}
 	}
