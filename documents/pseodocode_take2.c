@@ -200,6 +200,9 @@ add(t,pool) {
 /**
  * The function passed to created threads.
  *
+ * NOTE: is_empty(queue) is called a lot: It should be noted that we
+ * must make sure it's only called when we have the queue lock!
+ *
  * 1. Lock the task queue. We're using a condition lock, so we'll
  *    give up the lock until there is a task to run OR the tp_destroy
  *    function sent a broadcast to all threads that they should clean
