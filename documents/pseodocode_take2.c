@@ -130,12 +130,12 @@ end_write(pool) {
 	state_lock.V();		// Release the data field
 	w_num_mutex.P();	// Start editing w_num
 	w_num = 0;			// This was the ONLY thread that was trying to write (verified in the
-	read_try.V();		// start_write function) so allow readers in now.
+	read_try.V();		// start_write() function), so allow readers in now.
 	w_num_mutex.V();	// Stop editing w_num
 }
 
 /**
- * Use the above to quickly read and return the state of the thread pool
+ * Use the above to read and return the state of the thread pool
  */
 state_enum read_state(pool) {
 	start_read(pool);
