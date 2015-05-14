@@ -22,6 +22,11 @@ int start_write(ThreadPool*);
 void end_write(ThreadPool*);
 
 /**
+ * The function sent to all threads in the thread pool
+ */
+void* thread_func(void*);
+
+/**
  * Reads and returns the current state of the thread pool.
  *
  * Uses the reader functions above (implemented bellow).
@@ -59,7 +64,7 @@ ThreadPool* tpCreate(int num) {
 	// Locks and things
 	if (pthread_mutex_init(&tp->task_lock, NULL)					// If any of the initializations fail,
 			|| sem_init(&tp->r_num_mutex, 0, 1)					// clean up memory and return
-			|| sem_init(&tp->w_num_mutex, 0, 1)
+			|| sem_init(&tp->w_flag_mutex, 0, 1)
 			|| sem_init(&tp->r_entry, 0, 1)
 			|| sem_init(&tp->r_try, 0, 1)
 			|| sem_init(&tp->state_lock, 0, 1)
@@ -158,8 +163,8 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// Cleanup!
 	// Tasks (we can still lock here):
 	pthread_mutex_lock(&tp->task_lock);
-	while (!osIsQueueEmpty(tp->tasks)) {
-		Task* t = (Task*)osDequeue(tp->tasks);
+	while (!osIsQueueEmpty(&tp->tasks)) {
+		Task* t = (Task*)osDequeue(&tp->tasks);
 		free(t);
 	}
 	pthread_mutex_unlock(&tp->task_lock);
@@ -167,7 +172,7 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// Locks:
 	pthread_mutex_destroy(&tp->task_lock);
 	sem_destroy(&tp->r_num_mutex);
-	sem_destroy(&tp->w_num_mutex);
+	sem_destroy(&tp->w_flag_mutex);
 	sem_destroy(&tp->r_entry);
 	sem_destroy(&tp->r_try);
 	sem_destroy(&tp->state_lock);
@@ -222,7 +227,7 @@ int tpInsertTask(ThreadPool* tp, void (*func)(void *), void* param) {
 	// worst case scenario is that it'll take some time to enqueue the task... But that's only
 	// if the threads are busy, so the task won't get done anyway.
 	pthread_mutex_lock(&tp->task_lock);
-	osEnqueue(tp->tasks,(void*)t);
+	osEnqueue(&tp->tasks,(void*)t);
 	
 	// Signal before releasing the lock - make a thread wait for the lock.
 	pthread_cond_signal(&tp->queue_not_empty_or_dying);	
@@ -280,6 +285,7 @@ void* thread_func(void* void_tp) {
 	
 	// Some useful variables
 	State state;
+	Task* t;
 	ThreadPool* tp = (ThreadPool*)void_tp;
 
 	// Main thread task
@@ -287,19 +293,19 @@ void* thread_func(void* void_tp) {
 		
 		// Get the task lock, when we need it (task to do or we're dying)
 		pthread_mutex_lock(&tp->task_lock);										// This is OK because during INIT, we don't lock the task queue (after its creation)
-		while (osIsQueueEmpty(to->tasks) && (state = read_state(tp)) == ALIVE)	// Wait for a task OR the destruction of the pool
+		while (osIsQueueEmpty(&tp->tasks) && (state = read_state(tp)) == ALIVE)	// Wait for a task OR the destruction of the pool
 			pthread_cond_wait(&tp->queue_not_empty_or_dying,&tp->task_lock);	// Either one gives a signal
 		
 		switch(state) {
 			case ALIVE:										// If we're not dying, take a task and do it.
-				Task* t = (Task*)osDequeue(tp->tasks);
+				t = (Task*)osDequeue(&tp->tasks);
 				pthread_mutex_unlock(&tp->task_lock);
 				t->func(t->param);
 				free(t);
 				break;
 			case DO_ALL:									// If we're dying, but we should clean up the queue:
-				if (!is_empty(pool->queue)) {				// THIS TEST IS NOT USELESS! We may have got here
-					Task* t = (Task*)osDequeue(tp->tasks);	// via a broadcast() call from tp_destroy and the
+				if (!osIsQueueEmpty(&tp->tasks)) {			// THIS TEST IS NOT USELESS! We may have got here
+					t = (Task*)osDequeue(&tp->tasks);		// via a broadcast() call from tp_destroy and the
 					pthread_mutex_unlock(&tp->task_lock);	// state may be DO_ALL but is_empty() may be true...
 					t->func(t->param);						// Thus, the while() loop terminated and we got here.
 					free(t);
@@ -353,8 +359,8 @@ void start_read(ThreadPool* tp) {
 								// to block readers that come later from getting the resource before
 								// them.
 	sem_wait(&tp->r_num_mutex);	// For editing r_num
-	r_num++;
-	if (r_num == 1)				// If this is the first reader, lock the data
+	tp->r_num++;
+	if (tp->r_num == 1)			// If this is the first reader, lock the data
 		sem_wait(&tp->state_lock);
 	sem_post(&tp->r_num_mutex);	// Stop editing r_num
 	sem_post(&tp->r_try);		// We've successfully entered the reading area
@@ -365,8 +371,8 @@ void start_read(ThreadPool* tp) {
 // Exit read block
 void end_read(ThreadPool* tp) {
 	sem_wait(&tp->r_num_mutex);	// For editing r_num
-	r_num--;
-	if (r_num == 0)				// If we're the last reader to finish, free the resource
+	tp->r_num--;
+	if (tp->r_num == 0)			// If we're the last reader to finish, free the resource
 		sem_post(&tp->state_lock);
 	sem_post(&tp->r_num_mutex);	// Stop editing r_num
 }
@@ -376,11 +382,11 @@ void end_read(ThreadPool* tp) {
 // If fails, returns 0. Otherwise, returns 1.
 int start_write(ThreadPool* tp) {
 	sem_wait(&tp->w_flag_mutex);	// Start editing w_flag
-	if (w_flag) {					// If someone is already writing, we should do nothing because the
+	if (tp->w_flag) {				// If someone is already writing, we should do nothing because the
 		sem_post(&tp->w_flag_mutex);// "state" field should only be edited ONCE anyway...
 		return 0;					// Say we failed to start writing
 	}
-	w_flag = 1;						// This process is the only one trying to write (verified by the w_flag
+	tp->w_flag = 1;					// This process is the only one trying to write (verified by the w_flag
 	sem_wait(&tp->r_try);			// test above) so lock readers out.
 	sem_post(&tp->w_flag_mutex);	// Stop editing w_flag
 	sem_wait(&tp->state_lock);		// Lock the data field! We're going to write to it
@@ -392,7 +398,7 @@ int start_write(ThreadPool* tp) {
 void end_write(ThreadPool* tp) {
 	sem_post(&tp->state_lock);		// Release the data field
 	sem_wait(&tp->w_flag_mutex);	// Start editing w_flag
-	w_flag = 0;						// This was the ONLY thread that was trying to write (verified in the
+	tp->w_flag = 0;					// This was the ONLY thread that was trying to write (verified in the
 	sem_post(&tp->r_try);			// start_write() function), so allow readers in now.
 	sem_post(&tp->w_flag_mutex);	// Stop editing w_flag
 }
