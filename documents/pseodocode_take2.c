@@ -23,8 +23,15 @@ struct tp {
 	 *
 	 * Useful links:
 	 * - http://lass.cs.umass.edu/~shenoy/courses/fall08/lectures/Lec11.pdf		(PAGES 4-5)
-	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem			(LINK FROM LECTURE SLIDES: WE SHOULD IMPLEMENT THE SECOND READERS-WRITERS PROBLEM)
+	 * - http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#Second_readers-writers_problem
 	 */
+	int r_num, w_num; 						// Number of current readers and number of writers entering
+	semaphore r_num_mutex, w_num_mutex;		// Lock these when updating r_num or w_num
+	semaphore r_entry;						// The first lock locked when a reader starts trying to read
+	semaphore read_try;						// The second lock locked when a reader starts trying to read,
+											// also used by writers to block readers arriving after the writer
+											// wants to write
+	semaphore state_lock;					// Mutex lock for the state field itself
 	state_num state // Can be ALIVE, DO_ALL, DO_RUN
 	
 	// Queue with conditional lock.
@@ -61,21 +68,63 @@ tp* create(N) {
 }
 
 /**
- * How to implement these?
+ * Readers-writers lock mechanism, with preference to writers.
  *
- * See above comments
+ * This allows multiple readers at the same time (which is important,
+ * for reasons described in the thread pool struct). Unlike the lecture
+ * slides version, this one gives writers higher priority than readers.
+ * This prevents writer starvation.
+ * In theory, readers can starve, but the "write" operation used here
+ * should only be done once anyway - writing with these functions is
+ * how we implement the destruction of the thread pool. If many writers
+ * are starving the readers, that's the users fault. In addition, the
+ * write section (critical section) is VERY short (simple variable update)
+ * so starving readers would be hard...
+ *
+ * In a nutshell, this is like the readers-writers mechanism seen in
+ * class, but with another (read_try) lock before entering the reader
+ * section. It's job is to be locked by writers as well, so writers can
+ * signal to readers not to request the resource.
+ *
+ * For full explanation as to how this works, see:
+ * http://en.wikipedia.org/wiki/Readers%E2%80%93writers_problem#Second_readers-writers_problem
  */
 start_read(pool) {
-	???
+	r_entry.P();		// Start reader section
+	read_try.P();		// Looks useless, but notice that this isn't used in the exit section.
+						// This is because this is also locked by writers trying to write,
+						// to block readers that come later from getting the resource before
+						// them.
+	r_num_mutex.P();	// For editing r_num
+	r_num++;
+	if (r_num == 1)		// If this is the first reader, lock the data
+		state_lock.P();
+	r_num_mutex.V();	// Stop editing r_num
+	read_try.V();		// We've successfully entered the reading area
+	r_entry.V();		// Done with the pre-read phase
 }
 end_read(pool) {
-	???
+	r_num_mutex.P();	// For editing r_num
+	r_num--;
+	if (r_num == 0)		// If we're the last reader to finish, free the resource
+		state_lock.V();
+	r_num_mutex.V();	// Stop editing r_num
 }
 start_write(pool) {
-	???
+	w_num_mutex.P();	// Start editing w_num
+	w_num++;
+	if (w_num == 1)		// If we're the first one trying to write, stop subsequent readers from
+		read_try.P();	// successfully passing the "start_read" phase
+	w_num_mutex.V();	// Stop editing w_num
+	state_lock.P();		// Lock the data field! We're going to write to it
 }
 end_write(pool) {
-	???
+	state_lock.V();//release file
+	w_num_mutex.P();//reserve exit section
+	w_num--;//indicate you're leaving
+	if (w_num == 0)//checks if you're the last writer
+		read_try.V();//if you're last writer, you must unlock the readers. Allows them to try enter CS for reading
+	w_num_mutex.V();//release exit section
 }
 
 /**
