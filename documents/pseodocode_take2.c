@@ -114,20 +114,23 @@ end_read(pool) {
 		state_lock.V();
 	r_num_mutex.V();	// Stop editing r_num
 }
-start_write(pool) {
+bool start_write(pool) {
 	w_num_mutex.P();	// Start editing w_num
-	w_num++;
-	if (w_num == 1)		// If we're the first one trying to write, stop subsequent readers from
-		read_try.P();	// successfully passing the "start_read" phase
+	if (w_num) {		// If someone is already writing, we should do nothing because the
+		w_num_mutex.V();// "state" field should only be edited ONCE anyway...
+		return false;	// Say we failed to start writing
+	}
+	w_num = 1;			// This process is the only one trying to write (verified by the w_num
+	read_try.P();		// test above) so lock readers out.
 	w_num_mutex.V();	// Stop editing w_num
 	state_lock.P();		// Lock the data field! We're going to write to it
+	return true;		// Succeeded to start writing
 }
 end_write(pool) {
 	state_lock.V();		// Release the data field
 	w_num_mutex.P();	// Start editing w_num
-	w_num--;
-	if (w_num == 0)		// If this was the last writer that wanted to write, allow readers in
-		read_try.V();
+	w_num = 0;			// This was the ONLY thread that was trying to write (verified in the
+	read_try.V();		// start_write function) so allow readers in now.
 	w_num_mutex.V();	// Stop editing w_num
 }
 
@@ -157,7 +160,9 @@ state_enum read_state(pool) {
  * 6. When the threads are done, destroy all fields of the pool
  */
 destroy(pool,finish_all) {
-	start_write(pool);
+	if (!start_write(pool)) {					// Someone is already writing to pool->state!
+		return;									// This should only happen ONCE...
+	}
 	if (pool->state != ALIVE) {					// Destruction already in progress.
 		end_write(pool);						// This can happen if destroy() is called twice fast
 		return;
