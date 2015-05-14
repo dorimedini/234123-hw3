@@ -189,12 +189,20 @@ add(t,pool) {
 		end_read(pool);
 		return FAIL;
 	}
-	acquire_lock(pool->task_lock);			// No semaphore here: we're going to signal anyway.
-											// DANGER OF DEADLOCK WITH THREAD ACQUIRING THIS LOCK!
-	enqueue(t,pool->tasks);
-	release_lock(pool->task_lock);			// WHICH OF THESE THREE SHOULD COME FIRST?
-	end_read(pool);							// Allow destruction of the thread pool
-	signal(pool->queue_not_empty_or_dying);	// MUST WE ENFORCE IT SO THE COMPILER KNOWS?
+	acquire_lock(pool->task_lock);			// Editing the task queue now.
+											// DANGER OF DEADLOCK WITH THREAD ACQUIRING THIS LOCK?
+											// No: If a thread isn't waiting for a signal then all it
+											// does is read the state (we can allow that here even if we're
+											// waiting for the task_lock) or do it's thing (dequeue or exit).
+											// Either way, it'll let go of the lock eventually.
+											// We don't need to give the "add" function priority because the
+											// worst case scenario is that it'll take some time to enqueue the
+											// task... But that's only if the threads are busy' so the task
+											// won't get done anyway.
+	enqueue(t,pool->tasks);					// Add a task
+	signal(pool->queue_not_empty_or_dying);	// Signal before releasing the lock - make a thread wait for the lock
+	release_lock(pool->task_lock);			// Release the task lock so a thread can do the task
+	end_read(pool);							// Allow destruction of the thread pool (allow writing to pool->state)
 }
 
 /**
