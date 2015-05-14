@@ -160,16 +160,26 @@ state_enum read_state(pool) {
  * 6. When the threads are done, destroy all fields of the pool
  */
 destroy(pool,finish_all) {
+	acquire_lock(pool->task_lock);				// IMPORTANT: Lock the queue to make sure all threads are
+												// waiting for a broadcast OR waiting for the lock, and that
+												// no one is trying to add tasks! Otherwise a thread may be
+												// trapped waiting for a signal that will never come, or
+												// someone will think they can add a task when they actually
+												// can't...
 	if (!start_write(pool)) {					// Someone is already writing to pool->state!
-		return;									// This should only happen ONCE...
+		release_lock(pool->task_lock);			// This should only happen ONCE...
+		return;						
 	}
 	if (pool->state != ALIVE) {					// Destruction already in progress.
 		end_write(pool);						// This can happen if destroy() is called twice fast
+		release_lock(pool->task_lock);
 		return;
 	}
 	pool->state = finish_all ? DO_ALL : DO_RUN;	// Enter destroy mode
 	end_write(pool);							// Allow reading the state
-	broadcast(queue_not_empty_or_dying);		// Dying, actually. Thanks for asking. Tell everyone!
+	broadcast(queue_not_empty_or_dying);		// Now that we know all threads are waiting for it: send a
+												// signal to everyone!
+	release_lock(pool->task_lock);				// Allow threads to do their thing
 	{WAIT FOR ALL THREADS? THEN DESTROY FIELDS OF THE THREAD POOL?}
 }
 
