@@ -304,11 +304,17 @@ void* thread_func(void* void_tp) {
 	// Main thread task
 	while(1) {
 		
-		// Get the task lock, when we need it (task to do or we're dying)
+		// Get the initial state and the task lock, when we need it (task to do or we're dying)
+		state = read_state(tp);
 		pthread_mutex_lock(&tp->task_lock);										// This is OK because during INIT, we don't lock the task queue (after its creation)
-		while (osIsQueueEmpty(&tp->tasks) && (state = read_state(tp)) == ALIVE)	// Wait for a task OR the destruction of the pool
+		PRINT("Thread %d locked the task queue\n",pid);
+		while (osIsQueueEmpty(tp->tasks) && state == ALIVE) {					// Wait for a task OR the destruction of the pool
+			PRINT("Thread %d started waiting for a signal\n",pid);
 			pthread_cond_wait(&tp->queue_not_empty_or_dying,&tp->task_lock);	// Either one gives a signal
-		
+			state = read_state(tp);
+			PRINT("Thread %d got the signal and locked the lock\n",pid);
+		}
+		PRINT("Thread %d got out of the while() loop, state==%s\n",pid,state_string(read_state(tp)));
 		switch(state) {
 			case ALIVE:										// If we're not dying, take a task and do it.
 				t = (Task*)osDequeue(tp->tasks);
