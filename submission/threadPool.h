@@ -1,6 +1,7 @@
 #ifndef __THREAD_POOL__
 #define __THREAD_POOL__
 
+#include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include "osqueue.h"
