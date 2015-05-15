@@ -92,6 +92,7 @@ ThreadPool* tpCreate(int num) {
 	tp->r_num = 0;
 	tp->w_flag = 0;
 	tp->state = ALIVE;
+	tp->tasks = osCreateQueue();
 	
 	// Create threads!
 	// No need to lock anything, the threads are now allowed
@@ -175,10 +176,11 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// Cleanup!
 	// Tasks (we can still lock here):
 	pthread_mutex_lock(&tp->task_lock);
-	while (!osIsQueueEmpty(&tp->tasks)) {
-		Task* t = (Task*)osDequeue(&tp->tasks);
+	while (!osIsQueueEmpty(tp->tasks)) {
+		Task* t = (Task*)osDequeue(tp->tasks);
 		free(t);
 	}
+	osDestroyQueue(tp->tasks);
 	pthread_mutex_unlock(&tp->task_lock);
 	
 	// Locks:
@@ -239,7 +241,7 @@ int tpInsertTask(ThreadPool* tp, void (*func)(void *), void* param) {
 	// worst case scenario is that it'll take some time to enqueue the task... But that's only
 	// if the threads are busy, so the task won't get done anyway.
 	pthread_mutex_lock(&tp->task_lock);
-	osEnqueue(&tp->tasks,(void*)t);
+	osEnqueue(tp->tasks,(void*)t);
 	
 	// Signal before releasing the lock - make a thread wait for the lock.
 	pthread_cond_signal(&tp->queue_not_empty_or_dying);	
@@ -313,15 +315,15 @@ void* thread_func(void* void_tp) {
 		
 		switch(state) {
 			case ALIVE:										// If we're not dying, take a task and do it.
-				t = (Task*)osDequeue(&tp->tasks);
+				t = (Task*)osDequeue(tp->tasks);
 				pthread_mutex_unlock(&tp->task_lock);
 				PRINT("Thread %d doing it's task\n",pid);
 				t->func(t->param);
 				free(t);
 				break;
 			case DO_ALL:									// If we're dying, but we should clean up the queue:
-				if (!osIsQueueEmpty(&tp->tasks)) {			// THIS TEST IS NOT USELESS! We may have got here
-					t = (Task*)osDequeue(&tp->tasks);		// via a broadcast() call from tp_destroy and the
+				if (!osIsQueueEmpty(tp->tasks)) {			// THIS TEST IS NOT USELESS! We may have got here
+					t = (Task*)osDequeue(tp->tasks);		// via a broadcast() call from tp_destroy and the
 					pthread_mutex_unlock(&tp->task_lock);	// state may be DO_ALL but is_empty() may be true...
 					PRINT("Thread %d doing it's task\n",pid);
 					t->func(t->param);						// Thus, the while() loop terminated and we got here.

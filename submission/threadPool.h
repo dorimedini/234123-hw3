@@ -68,7 +68,7 @@ typedef struct thread_pool {
 	 */
 	pthread_cond_t queue_not_empty_or_dying;// The condition to signal
 	pthread_mutex_t task_lock;				// Lock this to change the queue. Needed to allow adding a task on an empty queue
-	OSQueue tasks;							// Tasks queue
+	OSQueue* tasks;							// Tasks queue
 	
 } ThreadPool;
 
