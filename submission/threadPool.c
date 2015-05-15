@@ -75,17 +75,13 @@ ThreadPool* tpCreate(int num) {
 	}
 	
 	// Locks and things
-	if (pthread_mutex_init(&tp->task_lock, NULL)					// If any of the initializations fail,
-			|| sem_init(&tp->r_num_mutex, 0, 1)					// clean up memory and return
-			|| sem_init(&tp->w_flag_mutex, 0, 1)
-			|| sem_init(&tp->r_entry, 0, 1)
-			|| sem_init(&tp->r_try, 0, 1)
-			|| sem_init(&tp->state_lock, 0, 1)
-			|| pthread_cond_init(&tp->queue_not_empty_or_dying, NULL)) {
-		free(tp->threads);
-		free(tp);
-		return NULL;
-	}
+	pthread_mutex_init(&tp->task_lock, NULL);
+	sem_init(&tp->r_num_mutex, 0, 1);
+	sem_init(&tp->w_flag_mutex, 0, 1);
+	sem_init(&tp->r_entry, 0, 1);
+	sem_init(&tp->r_try, 0, 1);
+	sem_init(&tp->state_lock, 0, 1);
+	pthread_cond_init(&tp->queue_not_empty_or_dying, NULL);
 	
 	// Basic fields
 	tp->N = num;
