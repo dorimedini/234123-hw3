@@ -9,7 +9,7 @@
 /**
  * Some debugging macros (conditional printing)
  */
-#define HW3_DEBUG 0
+#define HW3_DEBUG 1
 #define PRINT(...) do { \
 		if (HW3_DEBUG) printf(__VA_ARGS__); \
 	} while(0)

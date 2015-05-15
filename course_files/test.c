@@ -5,6 +5,7 @@
 
 
 void hello (void* a) {
+	PRINT("Thread %d printing\n",getpid());
 	printf("hello\n");
 }
 

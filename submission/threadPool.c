@@ -98,7 +98,7 @@ ThreadPool* tpCreate(int num) {
 	int i,ret;
 	for (i=0; i<num; ++i) {
 		ret = pthread_create(tp->threads + i, NULL, thread_func, (void*)tp);
-		PRINT("Creating thread #%d, return value: %d\n",i+1,ret);
+		PRINT("Creating thread %d, return value: %d\n",i+1,ret);
 	}
 	
 	// Return the ThreadPool
@@ -238,11 +238,14 @@ int tpInsertTask(ThreadPool* tp, void (*func)(void *), void* param) {
 	// worst case scenario is that it'll take some time to enqueue the task... But that's only
 	// if the threads are busy, so the task won't get done anyway.
 	pthread_mutex_lock(&tp->task_lock);
+	PRINT("Adding a task, lock is locked\n");
 	osEnqueue(tp->tasks,(void*)t);
 	
 	// Signal before releasing the lock - make a thread wait for the lock.
 	pthread_cond_signal(&tp->queue_not_empty_or_dying);	
+	PRINT("Task added, signal given, lock is locked\n");
 	pthread_mutex_unlock(&tp->task_lock);
+	PRINT("Task added, signal given, lock is unlocked\n");
 	
 	// Allow destruction of the thread pool (allow writing to pool->state)
 	end_read(tp);
@@ -334,11 +337,13 @@ void* thread_func(void* void_tp) {
 				}
 				else {										// If we're here, there are no more tasks to dequeue!
 					pthread_mutex_unlock(&tp->task_lock);	// As we're being destroyed anyway, exit.
+					PRINT("Thread %d unlocked the lock and returning\n",pid);
 					return NULL;
 				}
 				break;
 			case DO_RUN:									// If we're dying and no more tasks should be done,
 				pthread_mutex_unlock(&tp->task_lock);		// just exit before dequeuing anything...
+				PRINT("Thread %d unlocked the lock and returning\n",pid);
 				return NULL;
 				break;
 		}
