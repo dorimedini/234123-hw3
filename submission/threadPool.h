@@ -6,6 +6,18 @@
 #include "osqueue.h"
 
 /**
+ * Some debugging macros (conditional printing)
+ */
+#define HW3_DEBUG 0
+#define PRINT(...) do { \
+		if (HW3_DEBUG) printf(__VA_ARGS__); \
+	} while(0)
+#define PRINT_IF(cond,...) do { \
+		if (cond) PRINT(__VA_ARGS__); \
+	} while(0)
+
+
+/**
  * State definitions.
  *
  * These are the states a thread pool can be in.
@@ -24,7 +36,7 @@ typedef struct thread_pool {
 	
 	/**
 	 * These fields are used to implement CREW on the state field.
-	 * The implementation favors the writer (only one writer should
+	 * The implementation favours the writer (only one writer should
 	 * EVER write to the state because that's how we implement the
 	 * thread pool' destruction) by allowing the writer to block
 	 * entry into the "start reading" section for readers.

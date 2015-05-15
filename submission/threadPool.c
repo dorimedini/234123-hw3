@@ -12,6 +12,19 @@ typedef struct task_obj {
 } Task;
 
 /**
+ * Returns a string representation of the thread pool's state
+ */
+char* state_string(State state) {
+	switch(state) {
+		case ALIVE: return "ALIVE";
+		case DO_ALL: return "DO_ALL";
+		case DO_RUN: return "DO_RUN";
+	}
+	return NULL;
+}
+ 
+
+/**
  * CREW implementation for the thread pool state.
  *
  * Implementation and documentation bellow.
@@ -84,9 +97,10 @@ ThreadPool* tpCreate(int num) {
 	// No need to lock anything, the threads are now allowed
 	// to read the task queue and the state anyway - neither
 	// of them are going to be touched here.
-	int i;
+	int i,ret;
 	for (i=0; i<num; ++i) {
-		pthread_create(tp->threads + i, NULL, thread_func, (void*)tp);
+		ret = pthread_create(tp->threads + i, NULL, thread_func, (void*)tp);
+		PRINT("Creating thread #%d, return value: %d\n",i+1,ret);
 	}
 	
 	// Return the ThreadPool
@@ -148,11 +162,9 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// By locking here before broadcasting the destruction, we make sure all threads are waiting for
 	// the lock or for the signal! Either way, after the signal, the threads will know what to do and
 	// exit the loop.
-	pthread_mutex_lock(&tp->task_lock);						// Everybody listen up, I have something to say.
-															// Sit down, this is going to be quite a shock.
-															// *Inhales*
-	pthread_cond_broadcast(&tp->queue_not_empty_or_dying);	// I'm dying.
-	pthread_mutex_unlock(&tp->task_lock);					// *Awkward silence*
+	pthread_mutex_lock(&tp->task_lock);
+	pthread_cond_broadcast(&tp->queue_not_empty_or_dying);
+	pthread_mutex_unlock(&tp->task_lock);
 	
 	// Wait for all threads to exit (this could take a while)
 	int i;
@@ -283,6 +295,9 @@ int tpInsertTask(ThreadPool* tp, void (*func)(void *), void* param) {
  */
 void* thread_func(void* void_tp) {
 	
+	int pid = getpid();
+	PRINT("Thread %d started it's function\n",pid);
+	
 	// Some useful variables
 	State state;
 	Task* t;
@@ -300,6 +315,7 @@ void* thread_func(void* void_tp) {
 			case ALIVE:										// If we're not dying, take a task and do it.
 				t = (Task*)osDequeue(&tp->tasks);
 				pthread_mutex_unlock(&tp->task_lock);
+				PRINT("Thread %d doing it's task\n",pid);
 				t->func(t->param);
 				free(t);
 				break;
@@ -307,6 +323,7 @@ void* thread_func(void* void_tp) {
 				if (!osIsQueueEmpty(&tp->tasks)) {			// THIS TEST IS NOT USELESS! We may have got here
 					t = (Task*)osDequeue(&tp->tasks);		// via a broadcast() call from tp_destroy and the
 					pthread_mutex_unlock(&tp->task_lock);	// state may be DO_ALL but is_empty() may be true...
+					PRINT("Thread %d doing it's task\n",pid);
 					t->func(t->param);						// Thus, the while() loop terminated and we got here.
 					free(t);
 				}
