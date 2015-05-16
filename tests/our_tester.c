@@ -149,7 +149,21 @@ int total_threads;
 OSQueue* task_log;
 
 // Use this global variable to flag the random_task to be less random...
-int random_flag;
+int force_milliseconds;
+
+// Use this function to busy-wait for ms milliseconds
+void waitfor(int ms) {
+	if (ms<0) return;
+	struct timeval tv;
+	gettimeofday(&tv, NULL);
+	double start, end; 
+	start = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+	end = start; 
+	while ((end - start) < ms) {
+		gettimeofday(&tv, NULL);
+		end = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
+	}
+}
 
 // A generic task to give to threads.
 // Expects a valid pointer to an integer (so we can
@@ -159,13 +173,14 @@ int random_flag;
 void task_log_start();	// Declare these in advance, random_task uses them
 void task_log_end();
 void random_task(void* x) {
-	int i,r=(rand()%100)*50000;	// 50000~5000000. I hope 5000000 takes a while to count to...
-	if (random_flag)
-		r = random_flag;		// If we don't want it to be random, flag it...
+	int i,r;
+	r = force_milliseconds ?
+		force_milliseconds :	// The number of desired milliseconds
+		(rand()%10)*100;		// 10~1000 milliseconds, averages at about 500 milliseconds
 	task_log_start();
-	for (i=0; i<r; ++i);		// Count (should take a while)
-	*((int*)x)=1;				// Done
+	waitfor(r);					// Busy-wait
 	task_log_end();
+	*((int*)x)=1;				// Done
 	return;
 }
 
@@ -283,14 +298,14 @@ void print_task_table() {
 // Create n random tasks and insert into the pool
 #define CREATE_TASKS(n,tp) CREATE_TASKS_DELAY(n,tp,0)
 // Create n random tasks, insert them into the pool with some
-// delay between insertions
-#define CREATE_TASKS_DELAY(n,tp,d) \
+// delay (in milliseconds) between insertions
+#define CREATE_TASKS_DELAY(n,tp,ms) \
 		SETUP_PTRS(n); \
 		do { \
 			int i,j; \
 			for (i=0; i<n; ++i) \
 				ASSERT(!tpInsertTask(tp,random_task,(void*)(completion+i))); \
-			for (j=0; j<d; ++j); \
+			waitfor(ms); \
 		} while(0)
 // After all tasks should be done, use this to make sure it's true
 #define ASSERT_TASKS_DONE(n) do { \
@@ -309,7 +324,7 @@ void print_task_table() {
  * Give the threads long jobs
  */
 int long_test() {
-	random_flag=10000000;
+	force_milliseconds=1000;
 	INIT(10);
 	CREATE_TASKS(100,tp);
 	DESTROY(1);
@@ -321,7 +336,7 @@ int long_test() {
  * Just give them lots of tasks at once
  */
 int stress_test() {
-	random_flag = 0;
+	force_milliseconds = 0;
 	INIT(10);
 	CREATE_TASKS(100,tp);
 	DESTROY(1);
@@ -333,9 +348,9 @@ int stress_test() {
  * Give a task every X time, to give the threads some time to wait
  */
 int delay_test() {
-	random_flag = 0;
+	force_milliseconds = 0;
 	INIT(10);
-	CREATE_TASKS_DELAY(100,tp,1000000);
+	CREATE_TASKS_DELAY(100,tp,10);
 	DESTROY(1);
 	ASSERT_TASKS_DONE(100);
 	return 1;
@@ -347,9 +362,9 @@ int main() {
 	srand(time(NULL));
 	
 	// Run tests
-	RUN_TEST(long_test);
-	RUN_TEST(stress_test);
-	RUN_TEST(delay_test);
+	RUN_TEST(long_test);	// Should take 100 seconds
+	RUN_TEST(stress_test);	// Should take about 50 seconds - average 500 milliseconds per task, 100 tasks
+	RUN_TEST(delay_test);	// Should take about 51 seconds - average 500 milliseconds per task, 100 tasks, 10 ms delay per task
 	
 	return 0;
 }
