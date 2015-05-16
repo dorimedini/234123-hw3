@@ -88,7 +88,9 @@ ThreadPool* tpCreate(int num) {
 #endif
 	
 	// Locks and things
-	pthread_mutex_init(&tp->task_lock, NULL);
+	pthread_mutexattr_init(&tp->mutex_type);
+	pthread_mutexattr_settype(&tp->mutex_type,PTHREAD_MUTEX_ERRORCHECK_NP);
+	pthread_mutex_init(&tp->task_lock, &tp->mutex_type);
 	sem_init(&tp->r_num_mutex, 0, 1);
 	sem_init(&tp->w_flag_mutex, 0, 1);
 	sem_init(&tp->r_entry, 0, 1);
@@ -210,6 +212,7 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// Locks:
 	PRINT("Doing thread pool cleanup...\n");
 	pthread_mutex_destroy(&tp->task_lock);
+	pthread_mutexattr_destroy(&tp->mutex_type);
 	sem_destroy(&tp->r_num_mutex);
 	sem_destroy(&tp->w_flag_mutex);
 	sem_destroy(&tp->r_entry);
