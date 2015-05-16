@@ -258,8 +258,11 @@ thread_func(pool) {
 	state_enum state;
 	while(1) {
 		acquire_lock(pool->task_lock);	// This is OK because during INIT, we don't lock the task queue (after its creation)
-		while (is_empty(pool->queue) && (state = read_state(pool)) == ALIVE)	// Wait for a task OR the destruction of the pool
+		state = read_state(pool);
+		while (is_empty(pool->queue) && state == ALIVE)	{// Wait for a task OR the destruction of the pool
 			wait(pool->queue_not_empty_or_dying,pool->task_lock);				// Either one gives a signal
+			state = read_state(pool);
+		}
 		switch(state) {
 			case ALIVE:								// If we're not dying, take a task and do it.
 				t = dequeue(pool->queue);
