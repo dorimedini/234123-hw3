@@ -352,8 +352,21 @@ void* thread_func(void* void_tp) {
 	while(1) {
 		
 		// Get the initial state and the task lock, when we need it (task to do or we're dying)
-		state = read_state(tp);
+		// IMPORTANT: LOCK THE TASK LOCK BEFORE READING THE STATE!
+		// Otherwise, we can see this situation:
+		// - T1 reads the state, it's ALIVE
+		// - CS-->main thread
+		// - Main thread calls tpDestroy
+		// - Main thread broadcasts, starts waiting for all threads
+		// - CS-->T1
+		// - T1 locks the task lock (remember: state==ALIVE)
+		// - The task queue is empty and state==ALIVE so T1 will wait for a signal that will never come.
+		// Hence, DO NOT do this:
+		// 1. state = read_state(tp);
+		// 2. pthread_mutex_lock(&tp->task_lock);
+		// But do it the other way round:
 		pthread_mutex_lock(&tp->task_lock);										// This is OK because during INIT, we don't lock the task queue (after its creation)
+		state = read_state(tp);
 		PRINT("Thread %d locked the task queue\n",pid);
 		while (osIsQueueEmpty(tp->tasks) && state == ALIVE) {					// Wait for a task OR the destruction of the pool
 			PRINT("Thread %d started waiting for a signal\n",pid);
