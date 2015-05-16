@@ -9,13 +9,30 @@
 /**
  * Some debugging macros (conditional printing)
  */
-#define HW3_DEBUG 1
+#define HW3_DEBUG 0
+#define USE_GETTID 0
 #define PRINT(...) do { \
 		if (HW3_DEBUG) printf(__VA_ARGS__); \
 	} while(0)
 #define PRINT_IF(cond,...) do { \
 		if (cond) PRINT(__VA_ARGS__); \
 	} while(0)
+
+/**
+ * Include syscalls.h and redefine how we get the thread ID,
+ * depending on the DEBUG mode of the code.
+ *
+ * Used to print thread IDs. Maybe we're not allowed to submit
+ * with it (because in the version of Linux we're supposed to
+ * support, getpid() returns the thread ID so we won't need
+ * gettid()...), so enclose it in a preprocessor directive
+ */
+#if USE_GETTID
+#include <sys/syscall.h>		// For gettid()
+#define TID() syscall(SYS_gettid)
+#else
+#define TID() getpid()			// If syscalls.h isn't included, syscall(SYS_gettid) won't appear anywhere in the code
+#endif
 
 
 /**
@@ -32,6 +49,9 @@ typedef enum state_t {
 typedef struct thread_pool {
 	
 	int N;				// Total number of threads
+#if HW3_DEBUG
+	int* tids;			// Array of thread IDs (used for debugging)
+#endif
 	pthread_t* threads;	// Array of pthread identifiers. Used to wait for
 						// all threads during destruction of this struct.
 	
