@@ -1,6 +1,7 @@
 
 #include "threadPool.h"
 #include <stdlib.h>
+		
 
 /**
  * Task object
@@ -74,6 +75,17 @@ ThreadPool* tpCreate(int num) {
 		free(tp);
 		return NULL;
 	}
+#if HW3_DEBUG
+	tp->tids = (int*)malloc(sizeof(int)*num);
+	if (!tp->tids) {
+		free(tp->threads);
+		free(tp);
+		return NULL;
+	}
+	int tid_i;
+	for (tid_i=0; tid_i<num; ++tid_i)
+		tp->tids[tid_i]=0;
+#endif
 	
 	// Locks and things
 	pthread_mutex_init(&tp->task_lock, NULL);
@@ -138,6 +150,7 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 		return;
 	}
 	tp->state = should_wait_for_tasks ? DO_ALL : DO_RUN;	// Enter destroy mode
+	PRINT("Destroying the pool! Now allowing state read.\n");
 	end_write(tp);											// Allow reading the state
 
 	// Make sure the queue isn't busy.
@@ -161,14 +174,27 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	// the lock or for the signal! Either way, after the signal, the threads will know what to do and
 	// exit the loop.
 	pthread_mutex_lock(&tp->task_lock);
+	PRINT("Pool destroyed, task lock locked, sending broadcast...\n");
 	pthread_cond_broadcast(&tp->queue_not_empty_or_dying);
+	PRINT("... done. Unlocking the task lock.\n");
 	pthread_mutex_unlock(&tp->task_lock);
 	
 	// Wait for all threads to exit (this could take a while)
 	int i;
 	for (i=0; i<tp->N; ++i) {
+#if HW3_DEBUG
+		PRINT("Waiting for T%2d to finish (tid=%d)...\n", i+1, tp->tids[i]);
+#else
+		PRINT("Waiting for thread %d to finish...\n", i+1);
+#endif
 		pthread_join(tp->threads[i], NULL);
+#if HW3_DEBUG
+		PRINT("T%2d (tid=%d) done.\n", i+1, tp->tids[i]);
+#else
+		PRINT("Thread %d done.\n", i+1);
+#endif
 	}
+	PRINT("All threads done! Locking the task lock and destroying the task queue...\n");
 	
 	// Cleanup!
 	// Tasks (we can still lock here):
@@ -178,9 +204,11 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 		free(t);
 	}
 	osDestroyQueue(tp->tasks);
+	PRINT("Done. Unlocking the task queue\n");
 	pthread_mutex_unlock(&tp->task_lock);
 	
 	// Locks:
+	PRINT("Doing thread pool cleanup...\n");
 	pthread_mutex_destroy(&tp->task_lock);
 	sem_destroy(&tp->r_num_mutex);
 	sem_destroy(&tp->w_flag_mutex);
@@ -190,8 +218,12 @@ void tpDestroy(ThreadPool* tp, int should_wait_for_tasks) {
 	pthread_cond_destroy(&tp->queue_not_empty_or_dying);
 	
 	// Last cleanup, and out:
+#if HW3_DEBUG
+	free(tp->tids);
+#endif
 	free(tp->threads);
 	free(tp);
+	PRINT("Done destroying thread pool.\n");
 	return;
 }
 
@@ -297,14 +329,25 @@ int tpInsertTask(ThreadPool* tp, void (*func)(void *), void* param) {
  */
 void* thread_func(void* void_tp) {
 	
-	int pid = getpid();
-	PRINT("Thread %d started it's function\n",pid);
+	int pid = TID();
 	
 	// Some useful variables
 	State state;
 	Task* t;
 	ThreadPool* tp = (ThreadPool*)void_tp;
-
+	
+#if HW3_DEBUG
+	// Initialize tp->tids
+	pthread_t self = pthread_self();
+	int thread_i;
+	for (thread_i=0; thread_i<tp->N; ++thread_i)
+		if (pthread_equal(tp->threads[thread_i],self)) {
+			tp->tids[thread_i]=pid;
+			break;
+		}
+#endif
+	PRINT("Thread %d started it's function\n",pid);
+	
 	// Main thread task
 	while(1) {
 		
@@ -320,29 +363,29 @@ void* thread_func(void* void_tp) {
 		}
 		PRINT("Thread %d got out of the while() loop, state==%s\n",pid,state_string(read_state(tp)));
 		switch(state) {
-			case ALIVE:										// If we're not dying, take a task and do it.
+			case ALIVE:											// If we're not dying, take a task and do it.
 				t = (Task*)osDequeue(tp->tasks);
 				pthread_mutex_unlock(&tp->task_lock);
 				PRINT("Thread %d doing it's task\n",pid);
 				t->func(t->param);
 				free(t);
 				break;
-			case DO_ALL:									// If we're dying, but we should clean up the queue:
-				if (!osIsQueueEmpty(tp->tasks)) {			// THIS TEST IS NOT USELESS! We may have got here
-					t = (Task*)osDequeue(tp->tasks);		// via a broadcast() call from tp_destroy and the
-					pthread_mutex_unlock(&tp->task_lock);	// state may be DO_ALL but is_empty() may be true...
-					PRINT("Thread %d doing it's task\n",pid);
-					t->func(t->param);						// Thus, the while() loop terminated and we got here.
+			case DO_ALL:										// If we're dying, but we should clean up the queue:
+				if (!osIsQueueEmpty(tp->tasks)) {				// THIS TEST IS NOT USELESS! We may have got here
+					t = (Task*)osDequeue(tp->tasks);			// via a broadcast() call from tp_destroy and the
+					pthread_mutex_unlock(&tp->task_lock);		// state may be DO_ALL but is_empty() may be true...
+					PRINT("Thread %d doing it's task\n",pid);	// Thus, the while() loop terminated and we got here.
+					t->func(t->param);
 					free(t);
 				}
-				else {										// If we're here, there are no more tasks to dequeue!
-					pthread_mutex_unlock(&tp->task_lock);	// As we're being destroyed anyway, exit.
+				else {											// If we're here, there are no more tasks to dequeue!
+					pthread_mutex_unlock(&tp->task_lock);		// As we're being destroyed anyway, exit.
 					PRINT("Thread %d unlocked the lock and returning\n",pid);
 					return NULL;
 				}
 				break;
-			case DO_RUN:									// If we're dying and no more tasks should be done,
-				pthread_mutex_unlock(&tp->task_lock);		// just exit before dequeuing anything...
+			case DO_RUN:										// If we're dying and no more tasks should be done,
+				pthread_mutex_unlock(&tp->task_lock);			// just exit before dequeuing anything...
 				PRINT("Thread %d unlocked the lock and returning\n",pid);
 				return NULL;
 				break;
