@@ -11,13 +11,15 @@
  */
 #define HW3_DEBUG 0
 #define USE_GETTID 0
-#define PRINT(...) do { \
-		if (HW3_DEBUG) printf(__VA_ARGS__); \
-	} while(0)
-#define PRINT_IF(cond,...) do { \
-		if (cond) PRINT(__VA_ARGS__); \
-	} while(0)
 
+#if HW3_DEBUG
+	#define PRINT(...) printf(__VA_ARGS__)
+	#define PRINT_IF(cond,...) if(cond) PRINT(__VA_ARGS__)
+#else
+	#define PRINT(...)		// If we're not debugging, just erase these lines
+	#define PRINT_IF(...)
+#endif
+	
 /**
  * Include syscalls.h and redefine how we get the thread ID,
  * depending on the DEBUG mode of the code.
@@ -28,10 +30,10 @@
  * gettid()...), so enclose it in a preprocessor directive
  */
 #if USE_GETTID
-#include <sys/syscall.h>		// For gettid()
-#define TID() syscall(SYS_gettid)
+	#include <sys/syscall.h>		// For gettid()
+	#define TID() syscall(SYS_gettid)
 #else
-#define TID() getpid()			// If syscalls.h isn't included, syscall(SYS_gettid) won't appear anywhere in the code
+	#define TID() getpid()			// If syscalls.h isn't included, syscall(SYS_gettid) won't appear anywhere in the code
 #endif
 
 

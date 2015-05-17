@@ -100,22 +100,23 @@
  */
 #ifndef HW3_DEBUG
 
-#define HW3_DEBUG 0	// Set to 1 to print, set to 0 to prevent printing
-#define USE_GETTID 1
-#define PRINT(...) do { \
-		if (HW3_DEBUG) printf(__VA_ARGS__); \
-	} while(0)
+	#define HW3_DEBUG 0	// Set to 1 to print, set to 0 to prevent printing
+	#define USE_GETTID 1
 
-#define PRINT_IF(cond,...) do { \
-		if (cond) PRINT(__VA_ARGS__); \
-	} while(0)
+	#if HW3_DEBUG
+		#define PRINT(...) printf(__VA_ARGS__)
+		#define PRINT_IF(cond,...) if(cond) PRINT(__VA_ARGS__)
+	#else
+		#define PRINT(...)		// If we're not debugging, just erase these lines
+		#define PRINT_IF(...)
+	#endif
 
-#if USE_GETTID
-#include <sys/syscall.h>		// For gettid()
-#define TID() syscall(SYS_gettid)
-#else
-#define TID() getpid()			// If syscalls.h isn't included, syscall(SYS_gettid) won't appear anywhere in the code
-#endif
+	#if USE_GETTID
+		#include <sys/syscall.h>		// For gettid()
+		#define TID() syscall(SYS_gettid)
+	#else
+		#define TID() getpid()			// If syscalls.h isn't included, syscall(SYS_gettid) shouldn't appear anywhere in the code
+	#endif
 
 #endif
 
