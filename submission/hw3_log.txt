@@ -1,0 +1,2717 @@
+Running long_test...
+Thread 52640 started it's function
+Thread 52640 locked the task queue
+Thread 52640 started waiting for a signal
+Creating thread 1, return value: 0
+Thread 52641 started it's function
+Thread 52641 locked the task queue
+Thread 52641 started waiting for a signal
+Creating thread 2, return value: 0
+Creating thread 3, return value: 0
+Thread 52642 started it's function
+Thread 52642 locked the task queue
+Thread 52642 started waiting for a signal
+Creating thread 4, return value: 0
+Thread 52644 started it's function
+Thread 52644 locked the task queue
+Thread 52644 started waiting for a signal
+Thread 52643 started it's function
+Thread 52643 locked the task queue
+Thread 52643 started waiting for a signal
+Creating thread 5, return value: 0
+Creating thread 6, return value: 0
+Creating thread 7, return value: 0
+Thread 52647 started it's function
+Thread 52647 locked the task queue
+Thread 52647 started waiting for a signal
+Thread 52646 started it's function
+Thread 52646 locked the task queue
+Thread 52646 started waiting for a signal
+Thread 52645 started it's function
+Thread 52645 locked the task queue
+Thread 52645 started waiting for a signal
+Creating thread 8, return value: 0
+Creating thread 9, return value: 0
+Thread 52649 started it's function
+Thread 52649 locked the task queue
+Thread 52649 started waiting for a signal
+Creating thread 10, return value: 0
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Thread 52648 started it's function
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Destroying the pool! Now allowing state read.
+Pool destroyed, task lock locked, sending broadcast...
+... done. Unlocking the task lock.
+Waiting for T 1 to finish (tid=52640)...
+Thread 52644 got the signal and locked the lock
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52645 got the signal and locked the lock
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52640 got the signal and locked the lock
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52649 got the signal and locked the lock
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52648 doing it's task
+Thread 52644 doing it's task
+Thread 52642 got the signal and locked the lock
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52641 got the signal and locked the lock
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52646 got the signal and locked the lock
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52643 got the signal and locked the lock
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52647 got the signal and locked the lock
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52641 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 doing it's task
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 doing it's task
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 doing it's task
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 doing it's task
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 doing it's task
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 doing it's task
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 doing it's task
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 doing it's task
+Thread 52649 locked the task queue
+Thread 52649 got out of the while() loop, state==DO_ALL
+Thread 52649 unlocked the lock and returning
+Thread 52643 locked the task queue
+Thread 52643 got out of the while() loop, state==DO_ALL
+Thread 52643 unlocked the lock and returning
+Thread 52647 locked the task queue
+Thread 52647 got out of the while() loop, state==DO_ALL
+Thread 52647 unlocked the lock and returning
+Thread 52644 locked the task queue
+Thread 52644 got out of the while() loop, state==DO_ALL
+Thread 52644 unlocked the lock and returning
+Thread 52642 locked the task queue
+Thread 52642 got out of the while() loop, state==DO_ALL
+Thread 52642 unlocked the lock and returning
+Thread 52641 locked the task queue
+Thread 52641 got out of the while() loop, state==DO_ALL
+Thread 52641 unlocked the lock and returning
+Thread 52640 locked the task queue
+Thread 52640 got out of the while() loop, state==DO_ALL
+Thread 52640 unlocked the lock and returning
+Thread 52648 locked the task queue
+Thread 52648 got out of the while() loop, state==DO_ALL
+Thread 52648 unlocked the lock and returning
+Thread 52646 locked the task queue
+Thread 52646 got out of the while() loop, state==DO_ALL
+Thread 52646 unlocked the lock and returning
+T 1 (tid=52640) done.
+Waiting for T 2 to finish (tid=52641)...
+Thread 52645 locked the task queue
+Thread 52645 got out of the while() loop, state==DO_ALL
+Thread 52645 unlocked the lock and returning
+T 2 (tid=52641) done.
+Waiting for T 3 to finish (tid=52642)...
+T 3 (tid=52642) done.
+Waiting for T 4 to finish (tid=52643)...
+T 4 (tid=52643) done.
+Waiting for T 5 to finish (tid=52644)...
+T 5 (tid=52644) done.
+Waiting for T 6 to finish (tid=52645)...
+T 6 (tid=52645) done.
+Waiting for T 7 to finish (tid=52646)...
+T 7 (tid=52646) done.
+Waiting for T 8 to finish (tid=52647)...
+T 8 (tid=52647) done.
+Waiting for T 9 to finish (tid=52648)...
+T 9 (tid=52648) done.
+Waiting for T10 to finish (tid=52649)...
+T10 (tid=52649) done.
+All threads done! Locking the task lock and destroying the task queue...
+Done. Unlocking the task queue
+Doing thread pool cleanup...
+Done destroying thread pool.
+================================
+Task execution table by threads:
+================================
+  | T 1 (TID=52645) | T 2 (TID=52640) | T 3 (TID=52649) | T 4 (TID=52648) | T 5 (TID=52644) | T 6 (TID=52642) | T 7 (TID=52646) | T 8 (TID=52643) | T 9 (TID=52647) | T10 (TID=52641) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+================================
+ Done printing execution table! 
+================================
+OK
+Running stress_test...
+Creating thread 1, return value: 0
+Thread 52865 started it's function
+Thread 52865 locked the task queue
+Thread 52865 started waiting for a signal
+Creating thread 2, return value: 0
+Thread 52867 started it's function
+Thread 52867 locked the task queue
+Thread 52867 started waiting for a signal
+Creating thread 3, return value: 0
+Thread 52866 started it's function
+Thread 52866 locked the task queue
+Thread 52866 started waiting for a signal
+Thread 52868 started it's function
+Thread 52868 locked the task queue
+Thread 52868 started waiting for a signal
+Creating thread 4, return value: 0
+Thread 52869 started it's function
+Thread 52869 locked the task queue
+Thread 52869 started waiting for a signal
+Creating thread 5, return value: 0
+Creating thread 6, return value: 0
+Thread 52870 started it's function
+Thread 52870 locked the task queue
+Thread 52870 started waiting for a signal
+Thread 52871 started it's function
+Thread 52871 locked the task queue
+Thread 52871 started waiting for a signal
+Creating thread 7, return value: 0
+Creating thread 8, return value: 0
+Thread 52872 started it's function
+Thread 52872 locked the task queue
+Thread 52872 started waiting for a signal
+Thread 52873 started it's function
+Thread 52873 locked the task queue
+Thread 52873 started waiting for a signal
+Creating thread 9, return value: 0
+Creating thread 10, return value: 0
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Destroying the pool! Now allowing state read.
+Pool destroyed, task lock locked, sending broadcast...
+... done. Unlocking the task lock.
+Waiting for T 1 to finish (tid=52865)...
+Thread 52868 got the signal and locked the lock
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52869 got the signal and locked the lock
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52868 doing it's task
+Thread 52870 got the signal and locked the lock
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52874 started it's function
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52867 got the signal and locked the lock
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52872 got the signal and locked the lock
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52865 got the signal and locked the lock
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52866 got the signal and locked the lock
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52871 got the signal and locked the lock
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52871 locked the task queue
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52873 got the signal and locked the lock
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52871 locked the task queue
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 doing it's task
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52871 locked the task queue
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 doing it's task
+Thread 52871 locked the task queue
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 doing it's task
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 doing it's task
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 doing it's task
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 doing it's task
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 doing it's task
+Thread 52868 locked the task queue
+Thread 52868 got out of the while() loop, state==DO_ALL
+Thread 52868 unlocked the lock and returning
+Thread 52869 locked the task queue
+Thread 52869 got out of the while() loop, state==DO_ALL
+Thread 52869 unlocked the lock and returning
+Thread 52874 locked the task queue
+Thread 52874 got out of the while() loop, state==DO_ALL
+Thread 52874 unlocked the lock and returning
+Thread 52870 locked the task queue
+Thread 52870 got out of the while() loop, state==DO_ALL
+Thread 52870 unlocked the lock and returning
+Thread 52865 locked the task queue
+Thread 52865 got out of the while() loop, state==DO_ALL
+Thread 52865 unlocked the lock and returning
+Thread 52866 locked the task queue
+Thread 52866 got out of the while() loop, state==DO_ALL
+Thread 52866 unlocked the lock and returning
+Thread 52871 locked the task queue
+Thread 52871 got out of the while() loop, state==DO_ALL
+Thread 52871 unlocked the lock and returning
+Thread 52872 locked the task queue
+Thread 52872 got out of the while() loop, state==DO_ALL
+Thread 52872 unlocked the lock and returning
+Thread 52867 locked the task queue
+Thread 52867 got out of the while() loop, state==DO_ALL
+Thread 52867 unlocked the lock and returning
+Thread 52873 locked the task queue
+Thread 52873 got out of the while() loop, state==DO_ALL
+Thread 52873 unlocked the lock and returning
+T 1 (tid=52865) done.
+Waiting for T 2 to finish (tid=52866)...
+T 2 (tid=52866) done.
+Waiting for T 3 to finish (tid=52867)...
+T 3 (tid=52867) done.
+Waiting for T 4 to finish (tid=52868)...
+T 4 (tid=52868) done.
+Waiting for T 5 to finish (tid=52869)...
+T 5 (tid=52869) done.
+Waiting for T 6 to finish (tid=52870)...
+T 6 (tid=52870) done.
+Waiting for T 7 to finish (tid=52871)...
+T 7 (tid=52871) done.
+Waiting for T 8 to finish (tid=52872)...
+T 8 (tid=52872) done.
+Waiting for T 9 to finish (tid=52873)...
+T 9 (tid=52873) done.
+Waiting for T10 to finish (tid=52874)...
+T10 (tid=52874) done.
+All threads done! Locking the task lock and destroying the task queue...
+Done. Unlocking the task queue
+Doing thread pool cleanup...
+Done destroying thread pool.
+================================
+Task execution table by threads:
+================================
+  | T 1 (TID=52869) | T 2 (TID=52868) | T 3 (TID=52870) | T 4 (TID=52874) | T 5 (TID=52867) | T 6 (TID=52865) | T 7 (TID=52866) | T 8 (TID=52872) | T 9 (TID=52871) | T10 (TID=52873) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+================================
+ Done printing execution table! 
+================================
+OK
+Running delay_test...
+Thread 52946 started it's function
+Thread 52946 locked the task queue
+Thread 52946 started waiting for a signal
+Creating thread 1, return value: 0
+Thread 52947 started it's function
+Thread 52947 locked the task queue
+Thread 52947 started waiting for a signal
+Creating thread 2, return value: 0
+Thread 52948 started it's function
+Thread 52948 locked the task queue
+Thread 52948 started waiting for a signal
+Creating thread 3, return value: 0
+Thread 52949 started it's function
+Thread 52949 locked the task queue
+Thread 52949 started waiting for a signal
+Creating thread 4, return value: 0
+Thread 52950 started it's function
+Thread 52950 locked the task queue
+Thread 52950 started waiting for a signal
+Creating thread 5, return value: 0
+Thread 52951 started it's function
+Thread 52951 locked the task queue
+Thread 52951 started waiting for a signal
+Creating thread 6, return value: 0
+Thread 52952 started it's function
+Thread 52952 locked the task queue
+Thread 52952 started waiting for a signal
+Creating thread 7, return value: 0
+Thread 52953 started it's function
+Thread 52953 locked the task queue
+Thread 52953 started waiting for a signal
+Creating thread 8, return value: 0
+Thread 52954 started it's function
+Thread 52954 locked the task queue
+Thread 52954 started waiting for a signal
+Creating thread 9, return value: 0
+Thread 52955 started it's function
+Thread 52955 locked the task queue
+Thread 52955 started waiting for a signal
+Creating thread 10, return value: 0
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Adding a task, lock is locked
+Task added, signal given, lock is locked
+Task added, signal given, lock is unlocked
+Destroying the pool! Now allowing state read.
+Pool destroyed, task lock locked, sending broadcast...
+... done. Unlocking the task lock.
+Waiting for T 1 to finish (tid=52946)...
+Thread 52946 got the signal and locked the lock
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52955 got the signal and locked the lock
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52950 got the signal and locked the lock
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52954 got the signal and locked the lock
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52951 got the signal and locked the lock
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52947 got the signal and locked the lock
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52952 got the signal and locked the lock
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52953 got the signal and locked the lock
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52951 doing it's task
+Thread 52948 got the signal and locked the lock
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52949 got the signal and locked the lock
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52947 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52954 doing it's task
+Thread 52953 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 doing it's task
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 doing it's task
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 doing it's task
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 doing it's task
+Thread 52951 locked the task queue
+Thread 52951 got out of the while() loop, state==DO_ALL
+Thread 52951 unlocked the lock and returning
+Thread 52950 locked the task queue
+Thread 52950 got out of the while() loop, state==DO_ALL
+Thread 52950 unlocked the lock and returning
+Thread 52955 locked the task queue
+Thread 52955 got out of the while() loop, state==DO_ALL
+Thread 52955 unlocked the lock and returning
+Thread 52947 locked the task queue
+Thread 52947 got out of the while() loop, state==DO_ALL
+Thread 52947 unlocked the lock and returning
+Thread 52949 locked the task queue
+Thread 52949 got out of the while() loop, state==DO_ALL
+Thread 52949 unlocked the lock and returning
+Thread 52952 locked the task queue
+Thread 52952 got out of the while() loop, state==DO_ALL
+Thread 52952 unlocked the lock and returning
+Thread 52953 locked the task queue
+Thread 52953 got out of the while() loop, state==DO_ALL
+Thread 52953 unlocked the lock and returning
+Thread 52954 locked the task queue
+Thread 52954 got out of the while() loop, state==DO_ALL
+Thread 52954 unlocked the lock and returning
+Thread 52948 locked the task queue
+Thread 52948 got out of the while() loop, state==DO_ALL
+Thread 52948 unlocked the lock and returning
+Thread 52946 locked the task queue
+Thread 52946 got out of the while() loop, state==DO_ALL
+Thread 52946 unlocked the lock and returning
+T 1 (tid=52946) done.
+Waiting for T 2 to finish (tid=52947)...
+T 2 (tid=52947) done.
+Waiting for T 3 to finish (tid=52948)...
+T 3 (tid=52948) done.
+Waiting for T 4 to finish (tid=52949)...
+T 4 (tid=52949) done.
+Waiting for T 5 to finish (tid=52950)...
+T 5 (tid=52950) done.
+Waiting for T 6 to finish (tid=52951)...
+T 6 (tid=52951) done.
+Waiting for T 7 to finish (tid=52952)...
+T 7 (tid=52952) done.
+Waiting for T 8 to finish (tid=52953)...
+T 8 (tid=52953) done.
+Waiting for T 9 to finish (tid=52954)...
+T 9 (tid=52954) done.
+Waiting for T10 to finish (tid=52955)...
+T10 (tid=52955) done.
+All threads done! Locking the task lock and destroying the task queue...
+Done. Unlocking the task queue
+Doing thread pool cleanup...
+Done destroying thread pool.
+================================
+Task execution table by threads:
+================================
+  | T 1 (TID=52946) | T 2 (TID=52955) | T 3 (TID=52950) | T 4 (TID=52952) | T 5 (TID=52951) | T 6 (TID=52948) | T 7 (TID=52949) | T 8 (TID=52947) | T 9 (TID=52954) | T10 (TID=52953) 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |      START      |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |      START      |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |      START      |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |      START      |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |      START      |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |      START      |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |      START      |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |      START      |                 |                 |                 |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |      START      |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |      START      |
+  |                 |                 |                 |                 |       END       |                 |                 |                 |                 |                 |
+  |                 |                 |       END       |                 |                 |                 |                 |                 |                 |                 |
+  |                 |       END       |                 |                 |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |       END       |                 |                 |
+  |                 |                 |                 |                 |                 |                 |       END       |                 |                 |                 |
+  |                 |                 |                 |       END       |                 |                 |                 |                 |                 |                 |
+  |                 |                 |                 |                 |                 |                 |                 |                 |                 |       END       |
+  |                 |                 |                 |                 |                 |                 |                 |                 |       END       |                 |
+  |                 |                 |                 |                 |                 |       END       |                 |                 |                 |                 |
+  |       END       |                 |                 |                 |                 |                 |                 |                 |                 |                 |
+================================
+ Done printing execution table! 
+================================
+OK
