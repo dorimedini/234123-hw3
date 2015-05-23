@@ -6,51 +6,48 @@
  * 			================================
  * 			Task execution table by threads:
  * 			================================
- * 			  | T 1 (TID=20141) | T 2 (TID=20144) | T 3 (TID=20143) | T 4 (TID=20142) 
- * 			--------------------------------------------------------------------------
- * 			  |      START      |                 |                 |                 |	  (The first thread created started it's task)
- * 			  |                 |      START      |                 |                 |	  (The second thread started it's task)
- * 			  |                 |                 |      START      |                 |	  (The third thread started it's task)
- * 			  |                 |                 |                 |      START      |	  (The fourth thread started it's task)
- * 			  |       END       |                 |                 |                 |   (The first thread finished it's task)
- * 			  |      START      |                 |                 |                 |   (The first thread started another task)
- * 			  |                 |                 |       END       |                 |   (The third thread finished it's task)
- * 			  |                 |                 |      START      |                 |   (....etc)
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |       END       |                 |
- * 			  |                 |                 |      START      |                 |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |       END       |                 |                 |                 |
- * 			  |      START      |                 |                 |                 |
- * 			  |       END       |                 |                 |                 |
- * 			  |      START      |                 |                 |                 |
- * 			  |                 |       END       |                 |                 |
- * 			  |                 |      START      |                 |                 |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |                 |                 |       END       |
- * 			  |                 |                 |                 |      START      |
- * 			  |                 |       END       |                 |                 |
- * 			  |       END       |                 |                 |                 |
- * 			  |                 |                 |       END       |                 |
- * 			  |                 |                 |                 |       END       |
- * 			================================
- * 			 Done printing execution table! 
- * 			================================
+ *			   TIME:   | T 1 (TID= 9975) | T 2 (TID= 9976) | T 3 (TID= 9977) | T 4 (TID= 9978) | T 5 (TID= 9979) 
+ *			-----------------------------------------------------------------------------------------------------
+ *			2162318835 |      START      |                 |                 |                 |                 |
+ *			2162318842 |                 |      START      |                 |                 |                 |
+ *			2162318849 |                 |                 |      START      |                 |                 |
+ *			2162318850 |                 |                 |                 |      START      |                 |
+ *			2162318852 |                 |                 |                 |                 |      START      |
+ *			2162318862 |                 |                 |                 |                 |       END       |
+ *			2162318862 |                 |                 |                 |                 |      START      |
+ *			2162318874 |                 |                 |                 |                 |       END       |
+ *			2162318875 |                 |                 |                 |                 |      START      |
+ *			2162318882 |                 |                 |                 |                 |       END       |
+ *			2162318882 |                 |                 |                 |                 |      START      |
+ *			2162318892 |                 |                 |                 |                 |       END       |
+ *			2162318892 |                 |                 |                 |                 |      START      |
+ *			2162318901 |                 |                 |                 |                 |       END       |
+ *			2162318901 |                 |                 |                 |                 |      START      |
+ *			2162318913 |                 |                 |                 |                 |       END       |
+ *			2162318913 |                 |                 |                 |                 |      START      |
+ *			2162318923 |                 |                 |                 |                 |       END       |
+ *			2162318923 |                 |                 |                 |                 |      START      |
+ *			2162318931 |       END       |                 |                 |                 |                 |
+ *			2162318931 |      START      |                 |                 |                 |                 |
+ *			2162318939 |       END       |                 |                 |                 |                 |
+ *			2162318939 |      START      |                 |                 |                 |                 |
+ *			2162318949 |       END       |                 |                 |                 |                 |
+ *			2162318949 |      START      |                 |                 |                 |                 |
+ *			2162318961 |       END       |                 |                 |                 |                 |
+ *			2162318961 |      START      |                 |                 |                 |                 |
+ *			2162318969 |       END       |                 |                 |                 |                 |
+ *			2162318969 |      START      |                 |                 |                 |                 |
+ *			2162318979 |       END       |                 |                 |                 |                 |
+ *			2162318979 |      START      |                 |                 |                 |                 |
+ *			2162318988 |       END       |                 |                 |                 |                 |
+ *			2162318988 |      START      |                 |                 |                 |                 |
+ *			2162319003 |       END       |                 |                 |                 |                 |
+ *			2162319003 |      START      |                 |                 |                 |                 |
+ *			2162319011 |       END       |                 |                 |                 |                 |
+ *			2162319017 |                 |       END       |                 |                 |                 |
+ *			2162319022 |                 |                 |       END       |                 |                 |
+ *			2162319032 |                 |                 |                 |       END       |                 |
+ *			2162319033 |                 |                 |                 |                 |       END       |
  * The output may not help very much, but it may give you some clues.
  * It may be difficult to read in a narrow screen, so try calling ./our_tester>log instead of calling
  * ./our_tester, so you can view the log like a human being.
@@ -76,9 +73,9 @@
  *   - ASSERT_TASKS_DONE(n)
  *   Read about them next to their definition. For some examples, see the existing test functions called
  *   via main().
- * @ We've set up a default task for threads to do. By default (if the global random_flag is set to 0) it
+ * @ We've set up a default task for threads to do. By default (if the global force_milliseconds is set to 0) it
  *   counts to some high random number (so different threads take different lengths of time to complete
- *   their task), and you can set random_flag=X to force all threads to count to X.
+ *   their task), and you can set force_milliseconds=X to force all threads to take X milliseconds to complete.
  *   Also, whenever you use the macros to creates the tasks, an array called completion[] will be created.
  *   completion[i]=0 <==> Task #i has been completed. Thus, you can make sure tasks are completed by testing
  *   the value of elements of completion[] (this is what ASSERT_TASKS_DONE does)
@@ -90,14 +87,14 @@
 #include <stdlib.h>
 #include "threadPool.h"
 
-/**
+/*********************************************************************
  * Debug printing method.
  *
  * Uses the HW3_DEBUG flag to decide whether or not to print.
  *
  * We use an ifndef directive here because these macros are defined
  * in (our) threadPool.h, so for portability we redefine them here.
- */
+ *********************************************************************/
 #ifndef HW3_DEBUG
 
 	#define HW3_DEBUG 0	// Set to 1 to print, set to 0 to prevent printing
@@ -120,9 +117,9 @@
 
 #endif
 
-/**
+/**********************************************************************
  * Some simple testing macros
- */
+ *********************************************************************/
 #define FAIL(msg) do { \
 		printf("FAIL! In %s, Line %d: " #msg "\n",__FILE__,__LINE__); \
 		return 0; \
@@ -132,32 +129,87 @@
 		if (!(x)) FAIL(#x " is false"); \
 	} while(0)
 
-#define RUN_TEST(b) do { \
-		printf("Running " #b "...\n"); \
+#define RUN_TEST(b,...) do { \
+		printf("Running " #b ", " __VA_ARGS__ "...\n"); \
 		if (b()) printf("OK\n"); \
 	} while(0)
 
 
-/**
+/**********************************************************************
  * Thread tasks
  *
  * These functions / global variables are used to give the threads something to do.
  * They're used for giving them tasks of varying lengths and printing them.
- */
+ *********************************************************************/
 // Use these global variables to print the output of a test in a nice way
 int* thread_ids;
 int total_threads;
+int* thread_progress;
 OSQueue* task_log;
 
 // Use this global variable to flag the random_task to be less random...
 int force_milliseconds;
+double MS_RATIO;
+
+// Helper method to get the current time in milliseconds
+unsigned long now_mil() {
+	struct timeval t;
+	gettimeofday(&t, 0);
+	return (unsigned long)t.tv_sec * 1000 + (unsigned long)t.tv_usec / 1000;
+}
+
+// Call this function ONCE to try to find out how many for() iterations
+// in one second
+void init_ms_ratio() {
+	long start,end;
+	long i;
+
+	start = now_mil();
+	for(i=0; i<1000000000; ++i);
+	end = now_mil();
+	
+	// How many milliseconds did it take to count to 1 billion?
+	// Why, end-start of course!
+	
+	// Save the ratio for later use
+	MS_RATIO = (double)1000000000 / (double)(end-start);
+	
+}
+
+// Use this to update the progress of each thread in "real-time" (thanks to Roy for this idea)
+void update_progress() {
+	
+	// First, find the index of the thread
+	int index=-1, tid = TID();
+	while(thread_ids[++index] != tid && index<total_threads);
+		
+	// Next, update the progress:
+	if (thread_progress[index] < 0)
+		thread_progress[index]=0;
+	else {
+		thread_progress[index]+=5;
+		if (thread_progress[index]%1000 == 105) {
+			thread_progress[index]+=1000;						// One more task done
+			thread_progress[index]-=thread_progress[index]%1000;// Wipe the current progress
+		}
+	}
+	
+	// Print it
+	printf("\r THREAD PROGRESS: [ ");
+	int i;
+	for (i=0; i<total_threads; ++i)
+		printf("%3d%%/%d ",thread_progress[i]%1000,thread_progress[i]/1000+1);
+	printf("]");
+	fflush(NULL);
+	
+}
 
 // Use this function to busy-wait for ms milliseconds
-void waitfor(int ms) {
+void waitfor(double ms) {
 	if (ms<0) return;
-	long total = 1000000*ms;
+	long total = MS_RATIO*ms;
 	int i;
-	for (i=0; i<total; ++i);
+	for(i=0; i<total; ++i);
 }
 
 // A generic task to give to threads.
@@ -168,12 +220,19 @@ void waitfor(int ms) {
 void task_log_start();	// Declare these in advance, random_task uses them
 void task_log_end();
 void random_task(void* x) {
+	
+	// Get milliseconds, then split them into 20 chunks
 	int i,r;
 	r = force_milliseconds ?
 		force_milliseconds :	// The number of desired milliseconds
 		(rand()%10)*100;		// 10~1000 milliseconds, averages at about 500 milliseconds
+	double chunk = (double)r/20;
+	
 	task_log_start();
-	waitfor(r);					// Busy-wait
+	for (i=0; i<20; ++i) {
+		waitfor(chunk);
+		update_progress();
+	}
 	task_log_end();
 	*((int*)x)=1;				// Done
 	return;
@@ -185,8 +244,9 @@ void random_task(void* x) {
 // If not, adds it.
 // Next, adds a new string to print in task_log* (both start() and end()).
 typedef struct task_log_t {
-	int index;
-	int started;
+	int index;			// Thread number (not thread ID, it's index in thread_ids[])
+	int started;		// Started or ended with this event?
+	long event_time;	// Time of event
 } TaskLog;
 void task_log_start() {
 	
@@ -194,18 +254,20 @@ void task_log_start() {
 	// If it doesn't exists, create it
 	int index, tid = TID();
 	for (index=0; index<total_threads; ++index) {
-		if (!thread_ids[index]) {
+		if (!thread_ids[index] || thread_ids[index] == tid) {
 			thread_ids[index] = tid;
 			break;
 		}
-		else if(thread_ids[index] == tid)
-			break;
 	}
+	
+	// Update the progress bar
+	update_progress();
 	
 	// Log the beginning of the task
 	TaskLog* t = (TaskLog*)malloc(sizeof(TaskLog));
 	t->index = index;
 	t->started = 1;
+	t->event_time = now_mil();
 	osEnqueue(task_log, (void*)t);
 	
 }
@@ -219,6 +281,7 @@ void task_log_end() {
 	TaskLog* t = (TaskLog*)malloc(sizeof(TaskLog));
 	t->index = index;
 	t->started = 0;
+	t->event_time = now_mil();
 	osEnqueue(task_log, (void*)t);
 	
 }
@@ -230,19 +293,19 @@ void destroy_log() {
 }
 void print_task_table() {
 	int i,j;
-	printf("================================\n");
+	printf("\n================================\n");
 	printf("Task execution table by threads:\n");
 	printf("================================\n");
-	printf("  ");
+	printf("   TIME:   ");
 	for (i=0; i<total_threads; ++i)
 		printf("| T%2d (TID=%5d) ",i+1,thread_ids[i]);
-	printf("\n--");
+	printf("\n-----------");
 	for (i=0; i<total_threads; ++i)
 		printf("------------------");
 	printf("\n");
 	while(!osIsQueueEmpty(task_log)) {
 		TaskLog* t = (TaskLog*)osDequeue(task_log);
-		printf("  |");
+		printf("%10lu |",t->event_time);
 		for (i=0; i<t->index; ++i)
 			printf("                 |");
 		printf("      %s      |",t->started ? "START" : " END ");
@@ -256,20 +319,23 @@ void print_task_table() {
 	printf("================================\n");
 }
 
-/**
+/**********************************************************************
  * Macros to be used in test functions.
  *
  * For some examples, see the tests bellow.
- */
+ *********************************************************************/
 // Creates a thread pool with n threads, and updates the globals.
 #define INIT(n) \
 	total_threads = n; \
 	task_log = osCreateQueue(); \
 	thread_ids = (int*)malloc(sizeof(int)*n); \
+	thread_progress = (int*)malloc(sizeof(int)*n); \
 	do { \
 		int i; \
-		for(i=0; i<n; ++i) \
+		for(i=0; i<n; ++i) { \
 			thread_ids[i]=0; \
+			thread_progress[i]=-1; \
+		} \
 	} while(0); \
 	ThreadPool* tp = tpCreate(n)
 // Destroys the thread pool (with the should_wait parameter)
@@ -278,6 +344,7 @@ void print_task_table() {
 		tpDestroy(tp,should); \
 		print_task_table(); \
 		free(thread_ids); \
+		free(thread_progress); \
 		total_threads = 0; \
 		destroy_log(); \
 	} while(0)
@@ -315,6 +382,66 @@ void print_task_table() {
  **********************************************************************************************
  *********************************************************************************************/
 
+int one_thread_one_long_task() {
+	force_milliseconds = 5000;
+	INIT(1);
+	CREATE_TASKS(1,tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(1);
+	return 1;
+}
+
+int one_thread_three_tasks() {
+	force_milliseconds = 500;
+	INIT(1);
+	CREATE_TASKS(3,tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(3);
+	return 1;
+}
+
+int three_threads_one_task() {
+	force_milliseconds = 1000;
+	INIT(3);
+	CREATE_TASKS(1,tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(1);
+	return 1;
+}
+
+int three_threads_three_tasks() {
+	force_milliseconds = 500;
+	INIT(3);
+	CREATE_TASKS(3,tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(3);
+	return 1;
+}
+
+/**
+ * Just to see things basically work...
+ */
+int short_test() {
+	force_milliseconds = 10;
+	INIT(5);
+	CREATE_TASKS(20, tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(20);
+	return 1;
+}
+ 
+/**
+ * Medium duration test
+ */
+int medium_test() {
+	force_milliseconds = 100;
+	INIT(10);
+	CREATE_TASKS(50, tp);
+	DESTROY(1);
+	ASSERT_TASKS_DONE(50);
+	return 1;
+}
+ 
 /**
  * Give the threads long jobs
  */
@@ -353,13 +480,22 @@ int delay_test() {
 
 int main() {
 	
-	// Initialize the random number generator
+	// Initialize the random number generator and the millisecond-for() loop ratio
+	printf("Calculating MS_RATIO. Should take less than 30 seconds.\n");
 	srand(time(NULL));
+	init_ms_ratio();
+	printf("MS_RATIO set to %f\n",MS_RATIO);	// May take a while. Less than a minute.
 	
 	// Run tests
-	RUN_TEST(long_test);	// Should take 100 seconds
-	RUN_TEST(stress_test);	// Should take about 50 seconds - average 500 milliseconds per task, 100 tasks
-	RUN_TEST(delay_test);	// Should take about 51 seconds - average 500 milliseconds per task, 100 tasks, 10 ms delay per task
+	RUN_TEST(one_thread_one_long_task, "should take 5 seconds");
+	RUN_TEST(one_thread_three_tasks, "should take 1.5 seconds");
+	RUN_TEST(three_threads_one_task, "should take 1 second");
+	RUN_TEST(three_threads_three_tasks, "should take 1.5 seconds");
+	RUN_TEST(short_test, "should take 0.2 seconds");
+	RUN_TEST(medium_test, "should take 5 seconds");
+	RUN_TEST(long_test, "should take 100 seconds");
+	RUN_TEST(stress_test, "should take about 50 seconds - average 500 milliseconds per task, 100 tasks");
+	RUN_TEST(delay_test, "should take 51 seconds - average 500 milliseconds per task, 100 tasks, 10 ms delay per task");
 	
 	return 0;
 }
