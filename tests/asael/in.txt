@@ -1,0 +1,30 @@
+init 3
+insert 0
+insert 1
+insert 2
+insert 3
+destroy 1
+insert 4
+continue 2
+continue 1
+continue 0
+continue 3
+
+init 2
+insert 0
+insert 1
+insert 2
+destroy 0
+destroy 1
+insert 3
+continue 1
+continue 0
+
+init 1
+insert 0
+hello
+hello
+hello
+hello
+continue 0
+destroy 1
