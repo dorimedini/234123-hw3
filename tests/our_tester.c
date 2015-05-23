@@ -481,7 +481,7 @@ int delay_test() {
 int main() {
 	
 	// Initialize the random number generator and the millisecond-for() loop ratio
-	printf("Calculating MS_RATIO. Should take less than 30 seconds.\n");
+	printf("Calculating MS_RATIO. Should take less than 60 seconds.\n");
 	srand(time(NULL));
 	init_ms_ratio();
 	printf("MS_RATIO set to %f\n",MS_RATIO);	// May take a while. Less than a minute.
