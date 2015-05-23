@@ -155,15 +155,9 @@ int force_milliseconds;
 // Use this function to busy-wait for ms milliseconds
 void waitfor(int ms) {
 	if (ms<0) return;
-	struct timeval tv;
-	gettimeofday(&tv, NULL);
-	double start, end; 
-	start = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
-	end = start; 
-	while ((end - start) < ms) {
-		gettimeofday(&tv, NULL);
-		end = (tv.tv_sec) * 1000 + (tv.tv_usec) / 1000;
-	}
+	long total = 1000000*ms;
+	int i;
+	for (i=0; i<total; ++i);
 }
 
 // A generic task to give to threads.
