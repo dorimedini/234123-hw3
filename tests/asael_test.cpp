@@ -3,6 +3,7 @@
 #include <sstream>
 #include <semaphore.h>
 #include <time.h>
+#include <string.h>
 
 using namespace std;
 
@@ -26,10 +27,10 @@ struct task {
 	string name;
 };
 
+__thread char my_name[16];
+
 string thread_name() {
-	char str[16];
-	pthread_getname_np(pthread_self(),str,16);
-	return str;
+	return my_name;
 }
 
 void manuall(void* a) {
@@ -44,7 +45,7 @@ ThreadPool* tp;
 pthread_barrier_t setname_barrier;
 void setname(void* a) {
 	string str="Thread "+itos(long(a));
-	pthread_setname_np(pthread_self(),str.c_str());
+	strcpy(my_name,str.c_str());
 	pthread_barrier_wait(&setname_barrier);
 }
 

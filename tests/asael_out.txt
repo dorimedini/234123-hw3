@@ -1,11 +1,11 @@
-beginning task Task 0 on Thread 0
-beginning task Task 1 on Thread 1
-beginning task Task 2 on Thread 2
-ending task Task 2 on Thread 2
-beginning task Task 3 on Thread 2
-ending task Task 1 on Thread 1
-ending task Task 0 on Thread 0
-ending task Task 3 on Thread 2
+beginning task Task 0 on Thread 2
+beginning task Task 1 on Thread 0
+beginning task Task 2 on Thread 1
+ending task Task 2 on Thread 1
+beginning task Task 3 on Thread 1
+ending task Task 1 on Thread 0
+ending task Task 0 on Thread 2
+ending task Task 3 on Thread 1
 End of destroy()
 beginning task Task 0 on Thread 1
 beginning task Task 1 on Thread 0
